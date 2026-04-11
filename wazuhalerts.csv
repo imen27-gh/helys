@@ -1,0 +1,266 @@
+timestamp,agent_name,agent_id,agent_ip,rule_level,rule_id,rule_description,location,srcip,full_log
+2026-04-09T11:20:56.996-0400,syrine-LAN,001,192.168.0.162,7,533,Listened ports status (netstat) changed (new port opened or closed).,netstat listening ports,,"ossec: output: 'netstat listening ports':
+tcp6       0      0 ::1:631                 :::*                    LISTEN      -                   
+tcp 127.0.0.53:53 0.0.0.0:* 1032/systemd-resolv
+tcp 127.0.0.54:53 0.0.0.0:* 1032/systemd-resolv
+udp 127.0.0.53:53 0.0.0.0:* 1032/systemd-resolv
+udp 127.0.0.54:53 0.0.0.0:* 1032/systemd-resolv
+tcp        0      0 127.0.0.1:631           0.0.0.0:*               LISTEN      -                   
+udp 0.0.0.0:5353 0.0.0.0:* 1279/avahi-daemon
+udp6 :::5353 :::* 1279/avahi-daemon
+udp 0.0.0.0:43785 0.0.0.0:* 1279/avahi-daemon
+udp6 :::51393 :::* 1279/avahi-daemon"
+2026-04-09T11:20:57.802-0400,syrine-LAN,001,192.168.0.162,7,533,Listened ports status (netstat) changed (new port opened or closed).,netstat listening ports,,"ossec: output: 'netstat listening ports':
+tcp 127.0.0.53:53 0.0.0.0:* 1032/systemd-resolv
+tcp 127.0.0.54:53 0.0.0.0:* 1032/systemd-resolv
+udp 127.0.0.53:53 0.0.0.0:* 1032/systemd-resolv
+udp 127.0.0.54:53 0.0.0.0:* 1032/systemd-resolv
+tcp 127.0.0.1:631 0.0.0.0:* 11527/cupsd
+tcp6 ::1:631 :::* 11527/cupsd
+udp 0.0.0.0:5353 0.0.0.0:* 1279/avahi-daemon
+udp6 :::5353 :::* 1279/avahi-daemon
+udp 0.0.0.0:43785 0.0.0.0:* 1279/avahi-daemon
+udp6 :::51393 :::* 1279/avahi-daemon"
+2026-04-09T11:20:58.027-0400,syrine-LAN,001,192.168.0.162,7,19004,SCA summary: CIS Ubuntu Linux 24.04 LTS Benchmark v1.0.0.: Score less than 50% (45),sca,,
+2026-04-09T11:21:25.388-0400,syrine-LAN,001,192.168.0.162,9,19011,CIS Ubuntu Linux 24.04 LTS Benchmark v1.0.0.: Ensure all AppArmor Profiles are in enforce or complain mode.: Status changed from passed to failed,sca,,
+2026-04-09T11:21:26.478-0400,AD,013,192.168.0.165,9,60602,Windows application error event.,EventChannel,,
+2026-04-09T11:21:51.104-0400,AD,013,192.168.0.165,9,60602,Windows application error event.,EventChannel,,
+2026-04-09T11:23:24.466-0400,AD,013,192.168.0.165,7,60776,SessionEnv was unavailable to handle a critical notification event.,EventChannel,,
+2026-04-09T11:23:33.213-0400,AD,013,192.168.0.165,9,60602,Windows application error event.,EventChannel,,
+2026-04-09T11:23:50.779-0400,AD,013,192.168.0.165,9,60602,Windows application error event.,EventChannel,,
+2026-04-09T11:28:33.512-0400,AD,013,192.168.0.165,9,60602,Windows application error event.,EventChannel,,
+2026-04-09T11:33:51.287-0400,sousou,008,192.168.0.163,10,2502,syslog: User missed the password more than one time,journald,192.168.0.162,Apr 08 21:46:19 syrine-virtual-machine sshd[13531]: PAM 2 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.0.162  user=root
+2026-04-09T11:33:51.342-0400,sousou,008,192.168.0.163,10,2502,syslog: User missed the password more than one time,journald,192.168.0.162,Apr 08 21:47:13 syrine-virtual-machine sshd[13534]: PAM 2 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.0.162  user=root
+2026-04-09T11:33:51.352-0400,sousou,008,192.168.0.163,10,5763,sshd: brute force trying to get access to the system. Authentication failed.,journald,192.168.0.162,Apr 08 21:47:27 syrine-virtual-machine sshd[13539]: Failed password for root from 192.168.0.162 port 45236 ssh2
+2026-04-09T11:33:51.378-0400,sousou,008,192.168.0.163,10,2502,syslog: User missed the password more than one time,journald,192.168.0.162,Apr 08 21:47:32 syrine-virtual-machine sshd[13539]: PAM 2 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.0.162  user=root
+2026-04-09T11:33:51.393-0400,sousou,008,192.168.0.163,10,2502,syslog: User missed the password more than one time,journald,192.168.0.162,Apr 08 21:47:48 syrine-virtual-machine sshd[13541]: PAM 2 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.0.162  user=root
+2026-04-09T11:33:51.430-0400,sousou,008,192.168.0.163,10,2502,syslog: User missed the password more than one time,journald,192.168.0.162,Apr 08 21:48:03 syrine-virtual-machine sshd[13545]: PAM 2 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.0.162  user=root
+2026-04-09T11:33:51.449-0400,sousou,008,192.168.0.163,10,2502,syslog: User missed the password more than one time,journald,192.168.0.162,Apr 08 21:48:26 syrine-virtual-machine sshd[13547]: PAM 2 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.0.162  user=root
+2026-04-09T11:33:51.500-0400,sousou,008,192.168.0.163,10,2502,syslog: User missed the password more than one time,journald,192.168.0.162,Apr 08 21:49:08 syrine-virtual-machine sshd[13549]: PAM 2 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.0.162  user=root
+2026-04-09T11:33:51.503-0400,sousou,008,192.168.0.163,10,5551,PAM: Multiple failed logins in a small period of time.,journald,192.168.0.162,Apr 08 21:49:17 syrine-virtual-machine sshd[13564]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.0.162  user=root
+2026-04-09T11:33:51.529-0400,sousou,008,192.168.0.163,10,2502,syslog: User missed the password more than one time,journald,192.168.0.162,Apr 08 21:49:32 syrine-virtual-machine sshd[13564]: PAM 2 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.0.162  user=root
+2026-04-09T11:35:51.051-0400,AD,013,192.168.0.165,9,19011,CIS Microsoft Windows Server 2022 Benchmark v2.0.0: Ensure 'Enforce password history' is set to '24 or more password(s)'.: Status changed from passed to failed,sca,,
+2026-04-09T11:35:51.066-0400,AD,013,192.168.0.165,9,19011,"CIS Microsoft Windows Server 2022 Benchmark v2.0.0: Ensure 'Maximum password age' is set to '365 or fewer days, but not 0'.: Status changed from passed to failed",sca,,
+2026-04-09T11:35:51.080-0400,AD,013,192.168.0.165,9,19011,CIS Microsoft Windows Server 2022 Benchmark v2.0.0: Ensure 'Minimum password age' is set to '1 or more day(s)'.: Status changed from passed to failed,sca,,
+2026-04-09T11:35:51.160-0400,AD,013,192.168.0.165,9,19011,"CIS Microsoft Windows Server 2022 Benchmark v2.0.0: Ensure 'Account lockout threshold' is set to '5 or fewer invalid logon attempt(s), but not 0'.: Status changed from passed to failed",sca,,
+2026-04-09T11:36:04.193-0400,AD,013,192.168.0.165,7,19004,SCA summary: CIS Microsoft Windows Server 2022 Benchmark v2.0.0: Score less than 50% (30),sca,,
+2026-04-09T11:36:11.425-0400,AD,013,192.168.0.165,9,60602,Windows application error event.,EventChannel,,
+2026-04-09T11:36:49.423-0400,AD,013,192.168.0.165,7,19004,SCA summary: CIS Microsoft Windows Server 2022 Benchmark v2.0.0: Score less than 50% (31),sca,,
+2026-04-09T11:36:49.973-0400,AD,013,192.168.0.165,7,60776,SessionEnv was unavailable to handle a critical notification event.,EventChannel,,
+2026-04-09T11:37:40.050-0400,AD,013,192.168.0.165,9,60602,Windows application error event.,EventChannel,,
+2026-04-09T11:37:48.993-0400,AD,013,192.168.0.165,9,60602,Windows application error event.,EventChannel,,
+2026-04-09T11:42:49.206-0400,AD,013,192.168.0.165,9,60602,Windows application error event.,EventChannel,,
+2026-04-09T11:43:33.615-0400,syrine-LAN,001,192.168.0.162,7,533,Listened ports status (netstat) changed (new port opened or closed).,netstat listening ports,,"ossec: output: 'netstat listening ports':
+tcp 127.0.0.53:53 0.0.0.0:* 1040/systemd-resolv
+tcp 127.0.0.54:53 0.0.0.0:* 1040/systemd-resolv
+udp 127.0.0.53:53 0.0.0.0:* 1040/systemd-resolv
+udp 127.0.0.54:53 0.0.0.0:* 1040/systemd-resolv
+tcp 127.0.0.1:631 0.0.0.0:* 1683/cupsd
+tcp6 ::1:631 :::* 1683/cupsd
+udp 0.0.0.0:5353 0.0.0.0:* 1323/avahi-daemon
+udp6 :::5353 :::* 1323/avahi-daemon
+udp 0.0.0.0:43103 0.0.0.0:* 1323/avahi-daemon
+udp6 :::60708 :::* 1323/avahi-daemon"
+2026-04-09T11:44:21.970-0400,syrine-LAN,001,192.168.0.162,7,19004,SCA summary: CIS Ubuntu Linux 24.04 LTS Benchmark v1.0.0.: Score less than 50% (45),sca,,
+2026-04-09T11:47:49.493-0400,AD,013,192.168.0.165,9,60602,Windows application error event.,EventChannel,,
+2026-04-09T11:49:03.694-0400,AD,013,192.168.0.165,15,100100,CRITICAL: User added to Domain Admins group (Privilege Escalation),EventChannel,,"{""win"":{""system"":{""providerName"":""Microsoft-Windows-Security-Auditing"",""providerGuid"":""{54849625-5478-4994-a5ba-3e3b0328c30d}"",""eventID"":""4728"",""version"":""0"",""level"":""0"",""task"":""13826"",""opcode"":""0"",""keywords"":""0x8020000000000000"",""systemTime"":""2026-04-09T09:49:48.5943366Z"",""eventRecordID"":""140545"",""processID"":""744"",""threadID"":""3940"",""channel"":""Security"",""computer"":""WIN-LQ1OBI6GU4T.orange.com"",""severityValue"":""AUDIT_SUCCESS"",""message"":""\""A member was added to a security-enabled global group.\r\n\r\nSubject:\r\n\tSecurity ID:\t\tS-1-5-21-2128272109-502019328-454335178-500\r\n\tAccount Name:\t\tAdministrator\r\n\tAccount Domain:\t\tORANGE\r\n\tLogon ID:\t\t0x32ADBA\r\n\r\nMember:\r\n\tSecurity ID:\t\tS-1-5-21-2128272109-502019328-454335178-1106\r\n\tAccount Name:\t\tCN=ali ayadi,OU=Legal,OU=Direction,OU=Orange,DC=orange,DC=com\r\n\r\nGroup:\r\n\tSecurity ID:\t\tS-1-5-21-2128272109-502019328-454335178-512\r\n\tGroup Name:\t\tDomain Admins\r\n\tGroup Domain:\t\tORANGE\r\n\r\nAdditional Information:\r\n\tPrivileges:\t\t-\""""},""eventdata"":{""memberName"":""CN=ali ayadi,OU=Legal,OU=Direction,OU=Orange,DC=orange,DC=com"",""memberSid"":""S-1-5-21-2128272109-502019328-454335178-1106"",""targetUserName"":""Domain Admins"",""targetDomainName"":""ORANGE"",""targetSid"":""S-1-5-21-2128272109-502019328-454335178-512"",""subjectUserSid"":""S-1-5-21-2128272109-502019328-454335178-500"",""subjectUserName"":""Administrator"",""subjectDomainName"":""ORANGE"",""subjectLogonId"":""0x32adba""}}}"
+2026-04-09T11:52:49.677-0400,AD,013,192.168.0.165,9,60602,Windows application error event.,EventChannel,,
+2026-04-09T11:57:49.897-0400,AD,013,192.168.0.165,9,60602,Windows application error event.,EventChannel,,
+2026-04-09T12:02:50.306-0400,AD,013,192.168.0.165,9,60602,Windows application error event.,EventChannel,,
+2026-04-09T12:05:01.104-0400,AD,013,192.168.0.165,12,60159,Domain Admins Group Changed,EventChannel,,
+2026-04-09T12:07:50.521-0400,AD,013,192.168.0.165,9,60602,Windows application error event.,EventChannel,,
+2026-04-09T12:12:50.710-0400,AD,013,192.168.0.165,9,60602,Windows application error event.,EventChannel,,
+2026-04-09T12:17:50.887-0400,AD,013,192.168.0.165,9,60602,Windows application error event.,EventChannel,,
+2026-04-09T12:22:51.062-0400,AD,013,192.168.0.165,9,60602,Windows application error event.,EventChannel,,
+2026-04-09T12:26:01.197-0400,syrine-LAN,001,192.168.0.162,7,533,Listened ports status (netstat) changed (new port opened or closed).,netstat listening ports,,"ossec: output: 'netstat listening ports':
+tcp 127.0.0.53:53 0.0.0.0:* 1074/systemd-resolv
+tcp 127.0.0.54:53 0.0.0.0:* 1074/systemd-resolv
+udp 127.0.0.53:53 0.0.0.0:* 1074/systemd-resolv
+udp 127.0.0.54:53 0.0.0.0:* 1074/systemd-resolv
+tcp 127.0.0.1:631 0.0.0.0:* 1491/cupsd
+tcp6 ::1:631 :::* 1491/cupsd
+udp 0.0.0.0:5353 0.0.0.0:* 1169/avahi-daemon
+udp6 :::5353 :::* 1169/avahi-daemon
+udp6 :::43493 :::* 1169/avahi-daemon
+udp 0.0.0.0:60954 0.0.0.0:* 1169/avahi-daemon"
+2026-04-09T12:26:21.846-0400,syrine-LAN,001,192.168.0.162,9,19011,CIS Ubuntu Linux 24.04 LTS Benchmark v1.0.0.: Ensure all AppArmor Profiles are in enforce or complain mode.: Status changed from passed to failed,sca,,
+2026-04-09T12:27:51.300-0400,AD,013,192.168.0.165,9,60602,Windows application error event.,EventChannel,,
+2026-04-09T12:32:51.456-0400,AD,013,192.168.0.165,9,60602,Windows application error event.,EventChannel,,
+2026-04-09T12:39:44.944-0400,AD,013,192.168.0.165,9,19011,CIS Microsoft Windows Server 2022 Benchmark v2.0.0: Ensure 'Enforce password history' is set to '24 or more password(s)'.: Status changed from passed to failed,sca,,
+2026-04-09T12:39:44.959-0400,AD,013,192.168.0.165,9,19011,"CIS Microsoft Windows Server 2022 Benchmark v2.0.0: Ensure 'Maximum password age' is set to '365 or fewer days, but not 0'.: Status changed from passed to failed",sca,,
+2026-04-09T12:39:44.974-0400,AD,013,192.168.0.165,9,19011,CIS Microsoft Windows Server 2022 Benchmark v2.0.0: Ensure 'Minimum password age' is set to '1 or more day(s)'.: Status changed from passed to failed,sca,,
+2026-04-09T12:39:45.051-0400,AD,013,192.168.0.165,9,19011,"CIS Microsoft Windows Server 2022 Benchmark v2.0.0: Ensure 'Account lockout threshold' is set to '5 or fewer invalid logon attempt(s), but not 0'.: Status changed from passed to failed",sca,,
+2026-04-09T12:39:58.055-0400,AD,013,192.168.0.165,7,19004,SCA summary: CIS Microsoft Windows Server 2022 Benchmark v2.0.0: Score less than 50% (30),sca,,
+2026-04-09T12:40:11.075-0400,AD,013,192.168.0.165,9,60602,Windows application error event.,EventChannel,,
+2026-04-09T12:40:46.220-0400,AD,013,192.168.0.165,7,19004,SCA summary: CIS Microsoft Windows Server 2022 Benchmark v2.0.0: Score less than 50% (31),sca,,
+2026-04-09T12:41:14.141-0400,AD,013,192.168.0.165,9,60602,Windows application error event.,EventChannel,,
+2026-04-09T12:41:44.146-0400,AD,013,192.168.0.165,9,60602,Windows application error event.,EventChannel,,
+2026-04-09T12:46:44.245-0400,AD,013,192.168.0.165,9,60602,Windows application error event.,EventChannel,,
+2026-04-09T12:51:44.394-0400,AD,013,192.168.0.165,9,60602,Windows application error event.,EventChannel,,
+2026-04-09T12:56:44.554-0400,AD,013,192.168.0.165,9,60602,Windows application error event.,EventChannel,,
+2026-04-09T13:01:44.720-0400,AD,013,192.168.0.165,9,60602,Windows application error event.,EventChannel,,
+2026-04-09T13:02:04.572-0400,AD,013,192.168.0.165,7,60776,SessionEnv was unavailable to handle a critical notification event.,EventChannel,,
+2026-04-09T13:02:59.122-0400,AD,013,192.168.0.165,9,60602,Windows application error event.,EventChannel,,
+2026-04-09T13:06:44.920-0400,AD,013,192.168.0.165,9,60602,Windows application error event.,EventChannel,,
+2026-04-09T13:06:49.495-0400,sysmon,006,192.168.0.167,8,60110,User account changed,EventChannel,,
+2026-04-09T13:06:49.836-0400,sysmon,006,192.168.0.167,8,60110,User account changed,EventChannel,,
+2026-04-09T13:11:45.068-0400,AD,013,192.168.0.165,9,60602,Windows application error event.,EventChannel,,
+2026-04-09T13:14:02.664-0400,sysmon,006,192.168.0.167,15,100004,Mimikatz usage detected,EventChannel,,"{""win"":{""system"":{""providerName"":""Microsoft-Windows-Sysmon"",""providerGuid"":""{5770385f-c22a-43e0-bf4c-06f5698ffbd9}"",""eventID"":""1"",""version"":""5"",""level"":""4"",""task"":""1"",""opcode"":""0"",""keywords"":""0x8000000000000000"",""systemTime"":""2026-04-09T11:14:46.7355924Z"",""eventRecordID"":""14049"",""processID"":""5644"",""threadID"":""6396"",""channel"":""Microsoft-Windows-Sysmon/Operational"",""computer"":""DESKTOP-78VO0O1"",""severityValue"":""INFORMATION"",""message"":""\""Process Create:\r\nRuleName: -\r\nUtcTime: 2026-04-09 11:14:46.722\r\nProcessGuid: {a56edf8c-8a26-69d7-9d05-000000000c00}\r\nProcessId: 236\r\nImage: C:\\Temp\\mimikatz.exe\r\nFileVersion: 10.0.19041.1 (WinBuild.160101.0800)\r\nDescription: whoami - displays logged on user information\r\nProduct: Microsoft® Windows® Operating System\r\nCompany: Microsoft Corporation\r\nOriginalFileName: whoami.exe\r\nCommandLine: \""C:\\Temp\\mimikatz.exe\""\r\nCurrentDirectory: C:\\Temp\\\r\nUser: DESKTOP-78VO0O1\\sysmo\r\nLogonGuid: {a56edf8c-9172-69a1-dbcd-060000000000}\r\nLogonId: 0x6CDDB\r\nTerminalSessionId: 1\r\nIntegrityLevel: High\r\nHashes: SHA256=1D4902A04D99E8CCBFE7085E63155955FEE397449D386453F6C452AE407B8743\r\nParentProcessGuid: {a56edf8c-11e8-69a4-8103-000000000c00}\r\nParentProcessId: 292\r\nParentImage: C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\r\nParentCommandLine: \""C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\"" \r\nParentUser: DESKTOP-78VO0O1\\sysmo\""""},""eventdata"":{""utcTime"":""2026-04-09 11:14:46.722"",""processGuid"":""{a56edf8c-8a26-69d7-9d05-000000000c00}"",""processId"":""236"",""image"":""C:\\\\Temp\\\\mimikatz.exe"",""fileVersion"":""10.0.19041.1 (WinBuild.160101.0800)"",""description"":""whoami - displays logged on user information"",""product"":""Microsoft® Windows® Operating System"",""company"":""Microsoft Corporation"",""originalFileName"":""whoami.exe"",""commandLine"":""\\\""C:\\\\Temp\\\\mimikatz.exe\\\"""",""currentDirectory"":""C:\\\\Temp\\\\"",""user"":""DESKTOP-78VO0O1\\\\sysmo"",""logonGuid"":""{a56edf8c-9172-69a1-dbcd-060000000000}"",""logonId"":""0x6cddb"",""terminalSessionId"":""1"",""integrityLevel"":""High"",""hashes"":""SHA256=1D4902A04D99E8CCBFE7085E63155955FEE397449D386453F6C452AE407B8743"",""parentProcessGuid"":""{a56edf8c-11e8-69a4-8103-000000000c00}"",""parentProcessId"":""292"",""parentImage"":""C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe"",""parentCommandLine"":""\\\""C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe\\\"""",""parentUser"":""DESKTOP-78VO0O1\\\\sysmo""}}}"
+2026-04-09T13:16:45.243-0400,AD,013,192.168.0.165,9,60602,Windows application error event.,EventChannel,,
+2026-04-09T13:21:45.435-0400,AD,013,192.168.0.165,9,60602,Windows application error event.,EventChannel,,
+2026-04-09T13:26:45.580-0400,AD,013,192.168.0.165,9,60602,Windows application error event.,EventChannel,,
+2026-04-09T13:31:45.790-0400,AD,013,192.168.0.165,9,60602,Windows application error event.,EventChannel,,
+2026-04-09T13:36:46.028-0400,AD,013,192.168.0.165,9,60602,Windows application error event.,EventChannel,,
+2026-04-09T13:47:25.954-0400,AD,013,192.168.0.165,9,19011,CIS Microsoft Windows Server 2022 Benchmark v2.0.0: Ensure 'Enforce password history' is set to '24 or more password(s)'.: Status changed from passed to failed,sca,,
+2026-04-09T13:47:25.999-0400,AD,013,192.168.0.165,9,19011,"CIS Microsoft Windows Server 2022 Benchmark v2.0.0: Ensure 'Maximum password age' is set to '365 or fewer days, but not 0'.: Status changed from passed to failed",sca,,
+2026-04-09T13:47:26.016-0400,AD,013,192.168.0.165,9,19011,CIS Microsoft Windows Server 2022 Benchmark v2.0.0: Ensure 'Minimum password age' is set to '1 or more day(s)'.: Status changed from passed to failed,sca,,
+2026-04-09T13:47:26.125-0400,AD,013,192.168.0.165,9,19011,"CIS Microsoft Windows Server 2022 Benchmark v2.0.0: Ensure 'Account lockout threshold' is set to '5 or fewer invalid logon attempt(s), but not 0'.: Status changed from passed to failed",sca,,
+2026-04-09T13:47:39.037-0400,AD,013,192.168.0.165,7,19004,SCA summary: CIS Microsoft Windows Server 2022 Benchmark v2.0.0: Score less than 50% (30),sca,,
+2026-04-09T13:47:43.225-0400,AD,013,192.168.0.165,9,60602,Windows application error event.,EventChannel,,
+2026-04-09T13:48:18.799-0400,AD,013,192.168.0.165,7,19004,SCA summary: CIS Microsoft Windows Server 2022 Benchmark v2.0.0: Score less than 50% (31),sca,,
+2026-04-09T13:48:52.706-0400,AD,013,192.168.0.165,7,60776,SessionEnv was unavailable to handle a critical notification event.,EventChannel,,
+2026-04-09T13:49:18.264-0400,AD,013,192.168.0.165,9,60602,Windows application error event.,EventChannel,,
+2026-04-09T13:49:36.078-0400,AD,013,192.168.0.165,9,60602,Windows application error event.,EventChannel,,
+2026-04-09T13:52:12.870-0400,sousou,008,192.168.0.163,10,2502,syslog: User missed the password more than one time,journald,192.168.0.162,Apr 09 09:47:07 syrine-virtual-machine sshd[16337]: PAM 2 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.0.162  user=root
+2026-04-09T13:52:12.971-0400,sousou,008,192.168.0.163,7,533,Listened ports status (netstat) changed (new port opened or closed).,netstat listening ports,,"ossec: output: 'netstat listening ports':
+tcp 0.0.0.0:22 0.0.0.0:* /usr
+tcp6 :::22 :::* /usr
+tcp 127.0.0.53:53 0.0.0.0:* 634/systemd-resolve
+udp 127.0.0.53:53 0.0.0.0:* 634/systemd-resolve
+tcp 0.0.0.0:80 0.0.0.0:* 3687/nginx
+tcp6 :::80 :::* 3687/nginx
+tcp 127.0.0.1:631 0.0.0.0:* 16241/cupsd
+tcp6 ::1:631 :::* 16241/cupsd
+udp 0.0.0.0:631 0.0.0.0:* 16243/cups-browsed
+udp 0.0.0.0:5353 0.0.0.0:* 698/avahi-daemon
+udp6 :::5353 :::* 698/avahi-daemon
+tcp 0.0.0.0:8081 0.0.0.0:* 3687/nginx
+tcp 0.0.0.0:8082 0.0.0.0:* 3687/nginx
+udp6 :::35660 :::* 698/avahi-daemon
+udp 0.0.0.0:57786 0.0.0.0:* 698/avahi-daemon"
+2026-04-09T13:52:13.030-0400,sousou,008,192.168.0.163,7,2904,Dpkg (Debian Package) half configured.,/var/log/dpkg.log,,2026-04-09 05:51:49 status half-configured sshpass:amd64 1.09-1
+2026-04-09T13:52:13.031-0400,sousou,008,192.168.0.163,7,2904,Dpkg (Debian Package) half configured.,/var/log/dpkg.log,,2026-04-09 05:51:49 status half-configured man-db:amd64 2.10.2-1
+2026-04-09T13:52:13.031-0400,sousou,008,192.168.0.163,7,2902,New dpkg (Debian Package) installed.,/var/log/dpkg.log,,2026-04-09 05:51:49 status installed sshpass:amd64 1.09-1
+2026-04-09T13:52:13.031-0400,sousou,008,192.168.0.163,7,2902,New dpkg (Debian Package) installed.,/var/log/dpkg.log,,2026-04-09 05:51:50 status installed man-db:amd64 2.10.2-1
+2026-04-09T13:52:13.707-0400,sousou,008,192.168.0.163,10,2502,syslog: User missed the password more than one time,journald,,Apr 09 10:12:28 syrine-virtual-machine sshd[17367]: PAM 2 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.0.162
+2026-04-09T13:52:13.841-0400,sousou,008,192.168.0.163,10,5763,sshd: brute force trying to get access to the system. Authentication failed.,journald,192.168.0.162,Apr 09 11:33:46 syrine-virtual-machine sshd[17473]: Failed password for root from 192.168.0.162 port 55334 ssh2
+2026-04-09T13:52:13.884-0400,sousou,008,192.168.0.163,10,5551,PAM: Multiple failed logins in a small period of time.,journald,192.168.0.162,Apr 09 11:33:50 syrine-virtual-machine sshd[17524]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.0.162  user=root
+2026-04-09T13:52:13.940-0400,sousou,008,192.168.0.163,10,5551,PAM: Multiple failed logins in a small period of time.,journald,192.168.0.162,Apr 09 11:34:06 syrine-virtual-machine sshd[17542]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.0.162  user=root
+2026-04-09T13:52:14.049-0400,sousou,008,192.168.0.163,10,5551,PAM: Multiple failed logins in a small period of time.,journald,192.168.0.162,Apr 09 11:38:25 syrine-virtual-machine sshd[17593]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.0.162  user=syrine
+2026-04-09T13:52:14.083-0400,sousou,008,192.168.0.163,10,5551,PAM: Multiple failed logins in a small period of time.,journald,192.168.0.162,Apr 09 11:38:48 syrine-virtual-machine sshd[17609]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.0.162  user=syrine
+2026-04-09T13:52:14.111-0400,sousou,008,192.168.0.163,10,5712,sshd: brute force trying to get access to the system. Non existent user.,journald,192.168.0.162,Apr 09 11:41:43 syrine-virtual-machine sshd[17634]: Invalid user diablo from 192.168.0.162 port 34200
+2026-04-09T13:52:14.167-0400,sousou,008,192.168.0.163,10,5551,PAM: Multiple failed logins in a small period of time.,journald,192.168.0.162,Apr 09 11:41:44 syrine-virtual-machine sshd[17640]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.0.162
+2026-04-09T13:52:14.228-0400,sousou,008,192.168.0.163,10,5551,PAM: Multiple failed logins in a small period of time.,journald,192.168.0.162,Apr 09 11:41:44 syrine-virtual-machine sshd[17652]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.0.162
+2026-04-09T13:52:14.642-0400,sousou,008,192.168.0.163,10,2502,syslog: User missed the password more than one time,journald,,Apr 09 11:41:59 syrine-virtual-machine sshd[17636]: PAM 5 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.0.162
+2026-04-09T13:52:14.642-0400,sousou,008,192.168.0.163,8,5758,Maximum authentication attempts exceeded.,journald,,Apr 09 11:41:59 syrine-virtual-machine sshd[17636]: error: maximum authentication attempts exceeded for invalid user diablo from 192.168.0.162 port 34218 ssh2 [preauth]
+2026-04-09T13:52:14.646-0400,sousou,008,192.168.0.163,8,5758,Maximum authentication attempts exceeded.,journald,,Apr 09 11:41:59 syrine-virtual-machine sshd[17637]: error: maximum authentication attempts exceeded for invalid user diablo from 192.168.0.162 port 34226 ssh2 [preauth]
+2026-04-09T13:52:14.662-0400,sousou,008,192.168.0.163,10,2502,syslog: User missed the password more than one time,journald,,Apr 09 11:41:59 syrine-virtual-machine sshd[17637]: PAM 5 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.0.162
+2026-04-09T13:52:14.662-0400,sousou,008,192.168.0.163,8,5758,Maximum authentication attempts exceeded.,journald,,Apr 09 11:41:59 syrine-virtual-machine sshd[17640]: error: maximum authentication attempts exceeded for invalid user diablo from 192.168.0.162 port 34248 ssh2 [preauth]
+2026-04-09T13:52:14.662-0400,sousou,008,192.168.0.163,10,2502,syslog: User missed the password more than one time,journald,,Apr 09 11:41:59 syrine-virtual-machine sshd[17640]: PAM 5 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.0.162
+2026-04-09T13:52:14.664-0400,sousou,008,192.168.0.163,8,5758,Maximum authentication attempts exceeded.,journald,,Apr 09 11:41:59 syrine-virtual-machine sshd[17643]: error: maximum authentication attempts exceeded for invalid user diablo from 192.168.0.162 port 34270 ssh2 [preauth]
+2026-04-09T13:52:14.682-0400,sousou,008,192.168.0.163,10,2502,syslog: User missed the password more than one time,journald,,Apr 09 11:41:59 syrine-virtual-machine sshd[17643]: PAM 5 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.0.162
+2026-04-09T13:52:14.682-0400,sousou,008,192.168.0.163,10,2502,syslog: User missed the password more than one time,journald,,Apr 09 11:41:59 syrine-virtual-machine sshd[17642]: PAM 5 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.0.162
+2026-04-09T13:52:14.682-0400,sousou,008,192.168.0.163,8,5758,Maximum authentication attempts exceeded.,journald,,Apr 09 11:41:59 syrine-virtual-machine sshd[17642]: error: maximum authentication attempts exceeded for invalid user diablo from 192.168.0.162 port 34256 ssh2 [preauth]
+2026-04-09T13:52:14.682-0400,sousou,008,192.168.0.163,8,5758,Maximum authentication attempts exceeded.,journald,,Apr 09 11:41:59 syrine-virtual-machine sshd[17639]: error: maximum authentication attempts exceeded for invalid user diablo from 192.168.0.162 port 34232 ssh2 [preauth]
+2026-04-09T13:52:14.684-0400,sousou,008,192.168.0.163,10,2502,syslog: User missed the password more than one time,journald,,Apr 09 11:41:59 syrine-virtual-machine sshd[17639]: PAM 5 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.0.162
+2026-04-09T13:52:14.701-0400,sousou,008,192.168.0.163,8,5758,Maximum authentication attempts exceeded.,journald,,Apr 09 11:41:59 syrine-virtual-machine sshd[17644]: error: maximum authentication attempts exceeded for invalid user diablo from 192.168.0.162 port 34282 ssh2 [preauth]
+2026-04-09T13:52:14.701-0400,sousou,008,192.168.0.163,10,2502,syslog: User missed the password more than one time,journald,,Apr 09 11:41:59 syrine-virtual-machine sshd[17644]: PAM 5 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.0.162
+2026-04-09T13:52:14.701-0400,sousou,008,192.168.0.163,8,5758,Maximum authentication attempts exceeded.,journald,,Apr 09 11:41:59 syrine-virtual-machine sshd[17649]: error: maximum authentication attempts exceeded for invalid user diablo from 192.168.0.162 port 34300 ssh2 [preauth]
+2026-04-09T13:52:14.703-0400,sousou,008,192.168.0.163,10,2502,syslog: User missed the password more than one time,journald,,Apr 09 11:41:59 syrine-virtual-machine sshd[17649]: PAM 5 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.0.162
+2026-04-09T13:52:14.728-0400,sousou,008,192.168.0.163,8,5758,Maximum authentication attempts exceeded.,journald,,Apr 09 11:41:59 syrine-virtual-machine sshd[17653]: error: maximum authentication attempts exceeded for invalid user diablo from 192.168.0.162 port 34318 ssh2 [preauth]
+2026-04-09T13:52:14.728-0400,sousou,008,192.168.0.163,10,2502,syslog: User missed the password more than one time,journald,,Apr 09 11:41:59 syrine-virtual-machine sshd[17653]: PAM 5 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.0.162
+2026-04-09T13:52:14.728-0400,sousou,008,192.168.0.163,8,5758,Maximum authentication attempts exceeded.,journald,,Apr 09 11:41:59 syrine-virtual-machine sshd[17648]: error: maximum authentication attempts exceeded for invalid user diablo from 192.168.0.162 port 34288 ssh2 [preauth]
+2026-04-09T13:52:14.728-0400,sousou,008,192.168.0.163,10,2502,syslog: User missed the password more than one time,journald,,Apr 09 11:41:59 syrine-virtual-machine sshd[17648]: PAM 5 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.0.162
+2026-04-09T13:52:14.730-0400,sousou,008,192.168.0.163,8,5758,Maximum authentication attempts exceeded.,journald,,Apr 09 11:41:59 syrine-virtual-machine sshd[17652]: error: maximum authentication attempts exceeded for invalid user diablo from 192.168.0.162 port 34306 ssh2 [preauth]
+2026-04-09T13:52:14.749-0400,sousou,008,192.168.0.163,10,2502,syslog: User missed the password more than one time,journald,,Apr 09 11:41:59 syrine-virtual-machine sshd[17652]: PAM 5 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.0.162
+2026-04-09T13:52:14.753-0400,sousou,008,192.168.0.163,8,5758,Maximum authentication attempts exceeded.,journald,,Apr 09 11:42:01 syrine-virtual-machine sshd[17631]: error: maximum authentication attempts exceeded for invalid user diablo from 192.168.0.162 port 34180 ssh2 [preauth]
+2026-04-09T13:52:14.770-0400,sousou,008,192.168.0.163,8,5758,Maximum authentication attempts exceeded.,journald,,Apr 09 11:42:01 syrine-virtual-machine sshd[17632]: error: maximum authentication attempts exceeded for invalid user diablo from 192.168.0.162 port 34196 ssh2 [preauth]
+2026-04-09T13:52:14.770-0400,sousou,008,192.168.0.163,10,2502,syslog: User missed the password more than one time,journald,,Apr 09 11:42:01 syrine-virtual-machine sshd[17631]: PAM 5 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.0.162
+2026-04-09T13:52:14.770-0400,sousou,008,192.168.0.163,10,2502,syslog: User missed the password more than one time,journald,,Apr 09 11:42:01 syrine-virtual-machine sshd[17632]: PAM 5 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.0.162
+2026-04-09T13:52:14.773-0400,sousou,008,192.168.0.163,8,5758,Maximum authentication attempts exceeded.,journald,,Apr 09 11:42:01 syrine-virtual-machine sshd[17634]: error: maximum authentication attempts exceeded for invalid user diablo from 192.168.0.162 port 34200 ssh2 [preauth]
+2026-04-09T13:52:14.793-0400,sousou,008,192.168.0.163,10,2502,syslog: User missed the password more than one time,journald,,Apr 09 11:42:01 syrine-virtual-machine sshd[17633]: PAM 5 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.0.162
+2026-04-09T13:52:14.793-0400,sousou,008,192.168.0.163,10,2502,syslog: User missed the password more than one time,journald,,Apr 09 11:42:01 syrine-virtual-machine sshd[17634]: PAM 5 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.0.162
+2026-04-09T13:52:14.793-0400,sousou,008,192.168.0.163,8,5758,Maximum authentication attempts exceeded.,journald,,Apr 09 11:42:01 syrine-virtual-machine sshd[17635]: error: maximum authentication attempts exceeded for invalid user diablo from 192.168.0.162 port 34206 ssh2 [preauth]
+2026-04-09T13:52:14.793-0400,sousou,008,192.168.0.163,8,5758,Maximum authentication attempts exceeded.,journald,,Apr 09 11:42:01 syrine-virtual-machine sshd[17633]: error: maximum authentication attempts exceeded for invalid user diablo from 192.168.0.162 port 34198 ssh2 [preauth]
+2026-04-09T13:52:14.796-0400,sousou,008,192.168.0.163,10,2502,syslog: User missed the password more than one time,journald,,Apr 09 11:42:01 syrine-virtual-machine sshd[17635]: PAM 5 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.0.162
+2026-04-09T13:52:38.545-0400,sysmon,006,192.168.0.167,15,100004,Mimikatz usage detected,EventChannel,,"{""win"":{""system"":{""providerName"":""Microsoft-Windows-Sysmon"",""providerGuid"":""{5770385f-c22a-43e0-bf4c-06f5698ffbd9}"",""eventID"":""1"",""version"":""5"",""level"":""4"",""task"":""1"",""opcode"":""0"",""keywords"":""0x8000000000000000"",""systemTime"":""2026-04-09T11:53:22.7500996Z"",""eventRecordID"":""14583"",""processID"":""5644"",""threadID"":""6396"",""channel"":""Microsoft-Windows-Sysmon/Operational"",""computer"":""DESKTOP-78VO0O1"",""severityValue"":""INFORMATION"",""message"":""\""Process Create:\r\nRuleName: -\r\nUtcTime: 2026-04-09 11:53:22.745\r\nProcessGuid: {a56edf8c-9332-69d7-a406-000000000c00}\r\nProcessId: 3264\r\nImage: C:\\Temp\\mimikatz.exe\r\nFileVersion: 10.0.19041.1 (WinBuild.160101.0800)\r\nDescription: whoami - displays logged on user information\r\nProduct: Microsoft® Windows® Operating System\r\nCompany: Microsoft Corporation\r\nOriginalFileName: whoami.exe\r\nCommandLine: \""C:\\Temp\\mimikatz.exe\""\r\nCurrentDirectory: C:\\Temp\\\r\nUser: DESKTOP-78VO0O1\\sysmo\r\nLogonGuid: {a56edf8c-9172-69a1-dbcd-060000000000}\r\nLogonId: 0x6CDDB\r\nTerminalSessionId: 1\r\nIntegrityLevel: High\r\nHashes: SHA256=1D4902A04D99E8CCBFE7085E63155955FEE397449D386453F6C452AE407B8743\r\nParentProcessGuid: {a56edf8c-11e8-69a4-8103-000000000c00}\r\nParentProcessId: 292\r\nParentImage: C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\r\nParentCommandLine: \""C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\"" \r\nParentUser: DESKTOP-78VO0O1\\sysmo\""""},""eventdata"":{""utcTime"":""2026-04-09 11:53:22.745"",""processGuid"":""{a56edf8c-9332-69d7-a406-000000000c00}"",""processId"":""3264"",""image"":""C:\\\\Temp\\\\mimikatz.exe"",""fileVersion"":""10.0.19041.1 (WinBuild.160101.0800)"",""description"":""whoami - displays logged on user information"",""product"":""Microsoft® Windows® Operating System"",""company"":""Microsoft Corporation"",""originalFileName"":""whoami.exe"",""commandLine"":""\\\""C:\\\\Temp\\\\mimikatz.exe\\\"""",""currentDirectory"":""C:\\\\Temp\\\\"",""user"":""DESKTOP-78VO0O1\\\\sysmo"",""logonGuid"":""{a56edf8c-9172-69a1-dbcd-060000000000}"",""logonId"":""0x6cddb"",""terminalSessionId"":""1"",""integrityLevel"":""High"",""hashes"":""SHA256=1D4902A04D99E8CCBFE7085E63155955FEE397449D386453F6C452AE407B8743"",""parentProcessGuid"":""{a56edf8c-11e8-69a4-8103-000000000c00}"",""parentProcessId"":""292"",""parentImage"":""C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe"",""parentCommandLine"":""\\\""C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe\\\"""",""parentUser"":""DESKTOP-78VO0O1\\\\sysmo""}}}"
+2026-04-09T13:54:31.250-0400,AD,013,192.168.0.165,9,60602,Windows application error event.,EventChannel,,
+2026-04-09T13:54:47.050-0400,sousou,008,192.168.0.163,10,5712,sshd: brute force trying to get access to the system. Non existent user.,journald,192.168.0.162,Apr 09 11:54:43 syrine-virtual-machine sshd[20469]: Invalid user diablo from 192.168.0.162 port 44102
+2026-04-09T13:55:06.078-0400,sousou,008,192.168.0.163,8,5758,Maximum authentication attempts exceeded.,journald,,Apr 09 11:55:01 syrine-virtual-machine sshd[20464]: error: maximum authentication attempts exceeded for invalid user diablo from 192.168.0.162 port 44074 ssh2 [preauth]
+2026-04-09T13:55:06.084-0400,sousou,008,192.168.0.163,10,2502,syslog: User missed the password more than one time,journald,,Apr 09 11:55:01 syrine-virtual-machine sshd[20464]: PAM 5 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.0.162
+2026-04-09T13:55:06.118-0400,sousou,008,192.168.0.163,8,5758,Maximum authentication attempts exceeded.,journald,,Apr 09 11:55:01 syrine-virtual-machine sshd[20478]: error: maximum authentication attempts exceeded for invalid user diablo from 192.168.0.162 port 44150 ssh2 [preauth]
+2026-04-09T13:55:06.121-0400,sousou,008,192.168.0.163,10,2502,syslog: User missed the password more than one time,journald,,Apr 09 11:55:01 syrine-virtual-machine sshd[20478]: PAM 5 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.0.162
+2026-04-09T13:55:06.139-0400,sousou,008,192.168.0.163,8,5758,Maximum authentication attempts exceeded.,journald,,Apr 09 11:55:01 syrine-virtual-machine sshd[20483]: error: maximum authentication attempts exceeded for invalid user diablo from 192.168.0.162 port 44194 ssh2 [preauth]
+2026-04-09T13:55:06.139-0400,sousou,008,192.168.0.163,8,5758,Maximum authentication attempts exceeded.,journald,,Apr 09 11:55:01 syrine-virtual-machine sshd[20481]: error: maximum authentication attempts exceeded for invalid user diablo from 192.168.0.162 port 44158 ssh2 [preauth]
+2026-04-09T13:55:06.139-0400,sousou,008,192.168.0.163,10,2502,syslog: User missed the password more than one time,journald,,Apr 09 11:55:01 syrine-virtual-machine sshd[20483]: PAM 5 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.0.162
+2026-04-09T13:55:06.142-0400,sousou,008,192.168.0.163,10,2502,syslog: User missed the password more than one time,journald,,Apr 09 11:55:01 syrine-virtual-machine sshd[20481]: PAM 5 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.0.162
+2026-04-09T13:55:06.145-0400,sousou,008,192.168.0.163,8,5758,Maximum authentication attempts exceeded.,journald,,Apr 09 11:55:01 syrine-virtual-machine sshd[20484]: error: maximum authentication attempts exceeded for invalid user diablo from 192.168.0.162 port 44214 ssh2 [preauth]
+2026-04-09T13:55:06.150-0400,sousou,008,192.168.0.163,10,2502,syslog: User missed the password more than one time,journald,,Apr 09 11:55:01 syrine-virtual-machine sshd[20484]: PAM 5 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.0.162
+2026-04-09T13:55:48.807-0400,sousou,008,192.168.0.163,8,5758,Maximum authentication attempts exceeded.,journald,,Apr 09 11:55:44 syrine-virtual-machine sshd[21594]: error: maximum authentication attempts exceeded for invalid user diablo from 192.168.0.162 port 41176 ssh2 [preauth]
+2026-04-09T13:55:48.811-0400,sousou,008,192.168.0.163,10,2502,syslog: User missed the password more than one time,journald,,Apr 09 11:55:44 syrine-virtual-machine sshd[21594]: PAM 5 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.0.162
+2026-04-09T13:55:59.184-0400,sousou,008,192.168.0.163,10,5712,sshd: brute force trying to get access to the system. Non existent user.,journald,192.168.0.162,Apr 09 11:55:55 syrine-virtual-machine sshd[22071]: Failed password for invalid user diablo from 192.168.0.162 port 56402 ssh2
+2026-04-09T13:56:16.999-0400,sousou,008,192.168.0.163,8,5758,Maximum authentication attempts exceeded.,journald,,Apr 09 11:56:12 syrine-virtual-machine sshd[22077]: error: maximum authentication attempts exceeded for invalid user diablo from 192.168.0.162 port 56474 ssh2 [preauth]
+2026-04-09T13:56:17.007-0400,sousou,008,192.168.0.163,10,2502,syslog: User missed the password more than one time,journald,,Apr 09 11:56:12 syrine-virtual-machine sshd[22077]: PAM 5 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.0.162
+2026-04-09T13:56:17.011-0400,sousou,008,192.168.0.163,8,5758,Maximum authentication attempts exceeded.,journald,,Apr 09 11:56:12 syrine-virtual-machine sshd[22078]: error: maximum authentication attempts exceeded for invalid user diablo from 192.168.0.162 port 56494 ssh2 [preauth]
+2026-04-09T13:56:17.020-0400,sousou,008,192.168.0.163,10,2502,syslog: User missed the password more than one time,journald,,Apr 09 11:56:12 syrine-virtual-machine sshd[22078]: PAM 5 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.0.162
+2026-04-09T13:57:59.996-0400,sousou,008,192.168.0.163,10,5712,sshd: brute force trying to get access to the system. Non existent user.,journald,192.168.0.162,Apr 09 11:57:56 syrine-virtual-machine sshd[24811]: Invalid user diablo from 192.168.0.162 port 42150
+2026-04-09T13:58:00.067-0400,sousou,008,192.168.0.163,10,5551,PAM: Multiple failed logins in a small period of time.,journald,192.168.0.162,Apr 09 11:57:56 syrine-virtual-machine sshd[24816]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.0.162
+2026-04-09T13:58:18.286-0400,sousou,008,192.168.0.163,8,5758,Maximum authentication attempts exceeded.,journald,,Apr 09 11:58:13 syrine-virtual-machine sshd[24910]: error: maximum authentication attempts exceeded for invalid user diablo from 192.168.0.162 port 42294 ssh2 [preauth]
+2026-04-09T13:58:18.292-0400,sousou,008,192.168.0.163,10,2502,syslog: User missed the password more than one time,journald,,Apr 09 11:58:13 syrine-virtual-machine sshd[24910]: PAM 5 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.0.162
+2026-04-09T13:58:18.306-0400,sousou,008,192.168.0.163,8,5758,Maximum authentication attempts exceeded.,journald,,Apr 09 11:58:14 syrine-virtual-machine sshd[24810]: error: maximum authentication attempts exceeded for invalid user diablo from 192.168.0.162 port 42138 ssh2 [preauth]
+2026-04-09T13:58:18.313-0400,sousou,008,192.168.0.163,10,2502,syslog: User missed the password more than one time,journald,,Apr 09 11:58:14 syrine-virtual-machine sshd[24810]: PAM 5 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.0.162
+2026-04-09T13:58:18.318-0400,sousou,008,192.168.0.163,8,5758,Maximum authentication attempts exceeded.,journald,,Apr 09 11:58:14 syrine-virtual-machine sshd[24811]: error: maximum authentication attempts exceeded for invalid user diablo from 192.168.0.162 port 42150 ssh2 [preauth]
+2026-04-09T13:58:18.322-0400,sousou,008,192.168.0.163,10,2502,syslog: User missed the password more than one time,journald,,Apr 09 11:58:14 syrine-virtual-machine sshd[24811]: PAM 5 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.0.162
+2026-04-09T13:58:18.328-0400,sousou,008,192.168.0.163,8,5758,Maximum authentication attempts exceeded.,journald,,Apr 09 11:58:14 syrine-virtual-machine sshd[24815]: error: maximum authentication attempts exceeded for invalid user diablo from 192.168.0.162 port 42204 ssh2 [preauth]
+2026-04-09T13:58:18.332-0400,sousou,008,192.168.0.163,10,2502,syslog: User missed the password more than one time,journald,,Apr 09 11:58:14 syrine-virtual-machine sshd[24815]: PAM 5 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.0.162
+2026-04-09T13:58:18.337-0400,sousou,008,192.168.0.163,8,5758,Maximum authentication attempts exceeded.,journald,,Apr 09 11:58:14 syrine-virtual-machine sshd[24814]: error: maximum authentication attempts exceeded for invalid user diablo from 192.168.0.162 port 42194 ssh2 [preauth]
+2026-04-09T13:58:18.341-0400,sousou,008,192.168.0.163,10,2502,syslog: User missed the password more than one time,journald,,Apr 09 11:58:14 syrine-virtual-machine sshd[24814]: PAM 5 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.0.162
+2026-04-09T13:59:31.490-0400,AD,013,192.168.0.165,9,60602,Windows application error event.,EventChannel,,
+2026-04-09T14:04:31.595-0400,sousou,008,192.168.0.163,7,533,Listened ports status (netstat) changed (new port opened or closed).,netstat listening ports,,"ossec: output: 'netstat listening ports':
+tcp 0.0.0.0:22 0.0.0.0:* /usr
+tcp6 :::22 :::* /usr
+tcp 127.0.0.53:53 0.0.0.0:* 634/systemd-resolve
+udp 127.0.0.53:53 0.0.0.0:* 634/systemd-resolve
+tcp 0.0.0.0:80 0.0.0.0:* 3687/nginx
+tcp6 :::80 :::* 3687/nginx
+tcp 127.0.0.1:631 0.0.0.0:* 16241/cupsd
+tcp6 ::1:631 :::* 16241/cupsd
+udp 0.0.0.0:631 0.0.0.0:* 16243/cups-browsed
+udp 0.0.0.0:5353 0.0.0.0:* 698/avahi-daemon
+udp6 :::5353 :::* 698/avahi-daemon
+tcp 0.0.0.0:8081 0.0.0.0:* 3687/nginx
+tcp 0.0.0.0:8082 0.0.0.0:* 3687/nginx
+udp6 :::35660 :::* 698/avahi-daemon
+udp 0.0.0.0:56505 0.0.0.0:* 635/systemd-timesyn
+udp 0.0.0.0:57786 0.0.0.0:* 698/avahi-daemon"
+2026-04-09T14:04:31.633-0400,AD,013,192.168.0.165,9,60602,Windows application error event.,EventChannel,,
+2026-04-09T14:09:31.772-0400,AD,013,192.168.0.165,9,60602,Windows application error event.,EventChannel,,
+2026-04-09T14:10:39.782-0400,sousou,008,192.168.0.163,7,533,Listened ports status (netstat) changed (new port opened or closed).,netstat listening ports,,"ossec: output: 'netstat listening ports':
+tcp 0.0.0.0:22 0.0.0.0:* /usr
+tcp6 :::22 :::* /usr
+tcp 127.0.0.53:53 0.0.0.0:* 634/systemd-resolve
+udp 127.0.0.53:53 0.0.0.0:* 634/systemd-resolve
+tcp 0.0.0.0:80 0.0.0.0:* 3687/nginx
+tcp6 :::80 :::* 3687/nginx
+tcp 127.0.0.1:631 0.0.0.0:* 16241/cupsd
+tcp6 ::1:631 :::* 16241/cupsd
+udp 0.0.0.0:631 0.0.0.0:* 16243/cups-browsed
+udp 0.0.0.0:5353 0.0.0.0:* 698/avahi-daemon
+udp6 :::5353 :::* 698/avahi-daemon
+tcp 0.0.0.0:8081 0.0.0.0:* 3687/nginx
+tcp 0.0.0.0:8082 0.0.0.0:* 3687/nginx
+udp6 :::35660 :::* 698/avahi-daemon
+udp 0.0.0.0:57786 0.0.0.0:* 698/avahi-daemon"
+2026-04-09T14:14:31.909-0400,AD,013,192.168.0.165,9,60602,Windows application error event.,EventChannel,,
+2026-04-09T14:19:32.035-0400,AD,013,192.168.0.165,9,60602,Windows application error event.,EventChannel,,
+2026-04-09T14:24:32.208-0400,AD,013,192.168.0.165,9,60602,Windows application error event.,EventChannel,,
+2026-04-09T14:29:32.666-0400,AD,013,192.168.0.165,9,60602,Windows application error event.,EventChannel,,
+2026-04-09T14:33:55.327-0400,neda,000,,10,5404,Three failed attempts to run sudo,journald,,Apr 09 18:33:54 neda sudo[54903]:     neda : 3 incorrect password attempts ; TTY=pts/0 ; PWD=/home/neda ; USER=root ; COMMAND=/usr/bin/systemctl daemon-reload
+2026-04-09T14:34:32.943-0400,AD,013,192.168.0.165,9,60602,Windows application error event.,EventChannel,,
+2026-04-09T14:35:41.715-0400,neda,000,,10,5404,Three failed attempts to run sudo,journald,,Apr 09 18:35:40 neda sudo[55207]:     neda : 3 incorrect password attempts ; TTY=pts/0 ; PWD=/home/neda ; USER=root ; COMMAND=/usr/bin/systemctl daemon-reload
+2026-04-09T14:36:59.905-0400,neda,000,,10,5404,Three failed attempts to run sudo,journald,,Apr 09 18:36:58 neda sudo[60769]:     neda : 3 incorrect password attempts ; TTY=pts/1 ; PWD=/home/neda ; USER=root ; COMMAND=/usr/bin/su
+2026-04-09T14:55:49.868-0400,AD,013,192.168.0.165,15,100100,CRITICAL: User added to Domain Admins group (Privilege Escalation),EventChannel,,"{""win"":{""system"":{""providerName"":""Microsoft-Windows-Security-Auditing"",""providerGuid"":""{54849625-5478-4994-a5ba-3e3b0328c30d}"",""eventID"":""4728"",""version"":""0"",""level"":""0"",""task"":""13826"",""opcode"":""0"",""keywords"":""0x8020000000000000"",""systemTime"":""2026-04-09T12:55:12.8977278Z"",""eventRecordID"":""150553"",""processID"":""740"",""threadID"":""948"",""channel"":""Security"",""computer"":""WIN-LQ1OBI6GU4T.orange.com"",""severityValue"":""AUDIT_SUCCESS"",""message"":""\""A member was added to a security-enabled global group.\r\n\r\nSubject:\r\n\tSecurity ID:\t\tS-1-5-21-2128272109-502019328-454335178-500\r\n\tAccount Name:\t\tAdministrator\r\n\tAccount Domain:\t\tORANGE\r\n\tLogon ID:\t\t0x102BC7\r\n\r\nMember:\r\n\tSecurity ID:\t\tS-1-5-21-2128272109-502019328-454335178-1106\r\n\tAccount Name:\t\tCN=ali ayadi,OU=Legal,OU=Direction,OU=Orange,DC=orange,DC=com\r\n\r\nGroup:\r\n\tSecurity ID:\t\tS-1-5-21-2128272109-502019328-454335178-512\r\n\tGroup Name:\t\tDomain Admins\r\n\tGroup Domain:\t\tORANGE\r\n\r\nAdditional Information:\r\n\tPrivileges:\t\t-\""""},""eventdata"":{""memberName"":""CN=ali ayadi,OU=Legal,OU=Direction,OU=Orange,DC=orange,DC=com"",""memberSid"":""S-1-5-21-2128272109-502019328-454335178-1106"",""targetUserName"":""Domain Admins"",""targetDomainName"":""ORANGE"",""targetSid"":""S-1-5-21-2128272109-502019328-454335178-512"",""subjectUserSid"":""S-1-5-21-2128272109-502019328-454335178-500"",""subjectUserName"":""Administrator"",""subjectDomainName"":""ORANGE"",""subjectLogonId"":""0x102bc7""}}}"
+2026-04-09T14:55:51.288-0400,AD,013,192.168.0.165,9,60602,Windows application error event.,EventChannel,,
+2026-04-09T14:55:51.304-0400,AD,013,192.168.0.165,7,60776,SessionEnv was unavailable to handle a critical notification event.,EventChannel,,
+2026-04-09T14:55:51.350-0400,AD,013,192.168.0.165,9,60602,Windows application error event.,EventChannel,,
+2026-04-09T14:56:21.226-0400,AD,013,192.168.0.165,12,60159,Domain Admins Group Changed,EventChannel,,
