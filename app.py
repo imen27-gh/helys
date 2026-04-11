@@ -3,6 +3,7 @@ import numpy as np
 import json
 from fastapi import FastAPI, Request
 from fastapi.responses import JSONResponse
+from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field, validator
 from typing import Optional
 from datetime import datetime
@@ -48,6 +49,13 @@ class AlertInput(BaseModel):
 
 app = FastAPI(title="Helys SOC Decision Engine", version="2.0.0")
 
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 
 @app.get("/health")
 def health():
@@ -56,7 +64,6 @@ def health():
 
 @app.post("/predict")
 async def predict(request: Request):
-    # ── DEBUG : affiche le body brut reçu ────────────────────────────────
     raw_body = await request.body()
     print("=" * 50)
     print("RAW BODY FROM SHUFFLE:")
@@ -66,21 +73,18 @@ async def predict(request: Request):
         print(f"  {k}: {v}")
     print("=" * 50)
 
-    # ── Parse le JSON manuellement ────────────────────────────────────────
     try:
         data = json.loads(raw_body)
     except json.JSONDecodeError as e:
         print("ERREUR JSON DECODE:", e)
         return JSONResponse(status_code=400, content={"error": f"Invalid JSON: {e}"})
 
-    # ── Valide avec Pydantic ──────────────────────────────────────────────
     try:
         alert = AlertInput(**data)
     except Exception as e:
         print("ERREUR PYDANTIC:", e)
         return JSONResponse(status_code=422, content={"error": str(e), "received": data})
 
-    # ── Inférence ─────────────────────────────────────────────────────────
     hour        = alert.hour        if alert.hour        is not None else datetime.now().hour
     day_of_week = alert.day_of_week if alert.day_of_week is not None else datetime.now().weekday()
     det_ts      = alert.detection_ts or (datetime.utcnow().isoformat() + "Z")
