@@ -14,80 +14,79 @@ h1{font-size:22px;font-weight:500;margin-bottom:2px}
 .tab.active{background:#161b22;color:#e6edf3;border-color:#30363d;border-bottom-color:#161b22}
 .tab:hover:not(.active){color:#e6edf3}
 .page{display:none}.page.active{display:block}
-
-/* shared */
 .section-label{font-size:11px;color:#8b949e;text-transform:uppercase;letter-spacing:.08em;margin:20px 0 10px}
 .kpi-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:20px}
-.kpi{background:#161b22;border:1px solid #30363d;border-radius:10px;padding:16px}
+.kpi-grid-5{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-bottom:20px}
+.kpi{background:#161b22;border:1px solid #30363d;border-radius:10px;padding:16px;transition:border-color .3s}
+.kpi.pulse{border-color:#27c93f}
 .kpi-label{font-size:11px;color:#8b949e;margin-bottom:6px;text-transform:uppercase;letter-spacing:.04em}
-.kpi-val{font-size:28px;font-weight:500}
+.kpi-val{font-size:28px;font-weight:500;transition:color .3s}
 .kpi-sub{font-size:11px;color:#8b949e;margin-top:3px}
+.kpi-delta{font-size:11px;margin-top:4px;font-weight:500}
+.delta-up{color:#f85149}.delta-down{color:#27c93f}.delta-neu{color:#8b949e}
 .green{color:#27c93f}.amber{color:#e3b341}.red{color:#f85149}.blue{color:#58a6ff}.purple{color:#bc8cff}
 .grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:20px}
 .grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-bottom:20px}
 .card{background:#161b22;border:1px solid #30363d;border-radius:10px;padding:16px}
-.card-title{font-size:13px;font-weight:500;margin-bottom:14px}
-.bar-row{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+.card-title{font-size:13px;font-weight:500;margin-bottom:14px;display:flex;justify-content:space-between;align-items:center}
+.live-dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:#27c93f;animation:pulse 2s infinite;margin-right:5px}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+.bar-row{display:flex;align-items:center;gap:10px;margin-bottom:10px}
 .bar-label{font-size:12px;color:#8b949e;width:100px;flex-shrink:0;text-align:right}
 .bar-label-sm{width:80px;font-size:11px}
-.bar-track{flex:1;height:8px;background:#21262d;border-radius:4px;overflow:hidden}
-.bar-fill{height:100%;border-radius:4px;transition:width .5s ease}
+.bar-track{flex:1;height:10px;background:#21262d;border-radius:5px;overflow:hidden}
+.bar-fill{height:100%;border-radius:5px;transition:width .6s ease}
 .bar-num{font-size:12px;color:#e6edf3;font-weight:500;width:44px;text-align:right;flex-shrink:0}
-
-/* api bar */
-.api-bar{display:flex;gap:10px;align-items:center;margin-bottom:20px;background:#161b22;padding:12px 16px;border-radius:10px;border:1px solid #30363d}
+.bar-pct{font-size:10px;color:#8b949e;width:36px;text-align:right;flex-shrink:0}
+.spark-wrap{position:relative;height:60px;margin-top:8px}
+canvas.spark{width:100%;height:60px}
+.timeline-wrap{position:relative;height:120px;margin-top:8px}
+canvas.timeline{width:100%;height:120px}
+.api-bar{display:flex;gap:10px;align-items:center;margin-bottom:20px;background:#161b22;padding:12px 16px;border-radius:10px;border:1px solid #30363d;flex-wrap:wrap}
 .api-bar label{font-size:12px;color:#8b949e;white-space:nowrap}
-.api-bar input{flex:1;background:#0d1117;border:1px solid #30363d;border-radius:6px;color:#e6edf3;font-size:13px;padding:6px 10px;font-family:monospace}
+.api-bar input{flex:1;min-width:180px;background:#0d1117;border:1px solid #30363d;border-radius:6px;color:#e6edf3;font-size:13px;padding:6px 10px;font-family:monospace}
 .api-bar input:focus{outline:none;border-color:#58a6ff}
 .btn{background:#21262d;border:1px solid #30363d;border-radius:6px;color:#e6edf3;font-size:13px;padding:7px 16px;cursor:pointer;white-space:nowrap;transition:background .15s}
 .btn:hover{background:#30363d}
 .btn-green{border-color:#27c93f;color:#27c93f}.btn-green:hover{background:#0d2d16}
+.btn-red{border-color:#f85149;color:#f85149}.btn-red:hover{background:#2d0f0f}
+.btn-pdf{background:#1a237e;border:1px solid #3949ab;color:#90caf9;border-radius:6px;font-size:11px;padding:3px 10px;cursor:pointer;white-space:nowrap;transition:background .15s}
+.btn-pdf:hover{background:#283593}
+.btn-pdf:disabled{opacity:.4;cursor:not-allowed}
 .status{font-size:12px;color:#8b949e;padding:4px 10px;background:#161b22;border-radius:6px;border:1px solid #30363d;white-space:nowrap}
 .status.live{color:#27c93f;border-color:#27c93f}
-
-/* stream table */
+.status.err{color:#f85149;border-color:#f85149}
 .tbl{width:100%;border-collapse:collapse;font-size:12px;margin-bottom:20px}
 .tbl th{background:#161b22;color:#8b949e;font-weight:500;padding:8px 12px;text-align:left;border-bottom:1px solid #30363d;font-size:11px;text-transform:uppercase}
 .tbl td{padding:8px 12px;border-bottom:1px solid #21262d;vertical-align:middle}
 .tbl tr:hover td{background:#161b22}
-.tbl tr.flash td{animation:flash .7s ease}
-@keyframes flash{0%{background:#0d2d16}100%{background:transparent}}
-
-/* badges */
+.tbl tr.flash td{animation:rowflash .8s ease}
+@keyframes rowflash{0%{background:#0d2d16}100%{background:transparent}}
 .badge{display:inline-block;font-size:11px;font-weight:500;padding:2px 8px;border-radius:4px}
 .bc{background:#2d0f0f;color:#f85149;border:1px solid #5a1a1a}
 .bh{background:#2d1f0a;color:#e3b341;border:1px solid #5a3d0f}
 .bm{background:#0a1f2d;color:#58a6ff;border:1px solid #0f3a5a}
 .bl{background:#0d2d16;color:#27c93f;border:1px solid #1a5a2d}
 .auto-y{color:#27c93f;font-size:11px}.auto-n{color:#8b949e;font-size:11px}
-
-/* compare */
+.cb{display:inline-block;width:48px;height:5px;background:#21262d;border-radius:3px;overflow:hidden;vertical-align:middle;margin-left:4px}
+.cf{height:100%;background:#534AB7;border-radius:3px}
+.gauge-row{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+.gauge-label{font-size:12px;color:#8b949e;width:80px;flex-shrink:0}
+.gauge-track{flex:1;height:14px;background:#21262d;border-radius:7px;overflow:hidden;position:relative}
+.gauge-fill{height:100%;border-radius:7px;transition:width .6s ease;position:relative}
+.gauge-target{position:absolute;top:0;bottom:0;width:2px;background:#8b949e;opacity:.6}
+.gauge-val{font-size:12px;font-weight:500;width:48px;text-align:right;flex-shrink:0}
 .cmp-tbl{width:100%;border-collapse:collapse;font-size:12px}
 .cmp-tbl th{background:#161b22;color:#8b949e;font-weight:500;padding:10px 14px;text-align:left;border-bottom:1px solid #30363d;font-size:11px}
 .cmp-tbl td{padding:9px 14px;border-bottom:1px solid #21262d;line-height:1.5;vertical-align:top}
 .cmp-tbl td:first-child{color:#8b949e;font-size:11px;font-weight:500;white-space:nowrap}
 .bad{color:#f85149}.good{color:#27c93f}
-
-/* conf bar inline */
-.cb{display:inline-block;width:48px;height:5px;background:#21262d;border-radius:3px;overflow:hidden;vertical-align:middle;margin-left:4px}
-.cf{height:100%;background:#534AB7;border-radius:3px}
-
-/* dot pulse */
-.dot{display:inline-block;width:7px;height:7px;border-radius:50%;margin-right:5px;background:#27c93f;animation:pulse 2s infinite}
-@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
-
-.footer{margin-top:28px;padding-top:14px;border-top:1px solid #30363d;font-size:11px;color:#8b949e;display:flex;justify-content:space-between}
-
-/* model stat cards */
-.stat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:16px}
-.stat{background:#0d1117;border:1px solid #21262d;border-radius:8px;padding:12px}
-.stat-label{font-size:11px;color:#8b949e;margin-bottom:4px}
-.stat-val{font-size:20px;font-weight:500}
-
-/* donut */
-.donut-wrap{display:flex;align-items:center;justify-content:center;gap:20px;padding:10px 0}
-.legend-item{display:flex;align-items:center;gap:6px;font-size:12px;color:#8b949e}
-.ld{width:10px;height:10px;border-radius:50%}
+.footer{margin-top:28px;padding-top:14px;border-top:1px solid #30363d;font-size:11px;color:#8b949e;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.ts-pill{font-size:11px;background:#161b22;border:1px solid #30363d;border-radius:6px;padding:3px 10px;font-family:monospace;color:#8b949e}
+.warn-box{background:#1a0800;border:1px solid #e3b341;border-radius:10px;padding:12px 16px;color:#ffb347;font-size:.88rem;margin-bottom:16px}
+.no-data{text-align:center;color:#8b949e;padding:32px;font-size:13px}
+.pdf-toast{position:fixed;bottom:24px;right:24px;background:#161b22;border:1px solid #3949ab;border-radius:8px;padding:10px 16px;font-size:12px;color:#90caf9;z-index:9999;opacity:0;transform:translateY(8px);transition:all .3s}
+.pdf-toast.show{opacity:1;transform:translateY(0)}
 </style>
 </head>
 <body>
@@ -95,145 +94,157 @@ h1{font-size:22px;font-weight:500;margin-bottom:2px}
 <h1>Helys SOC Decision Engine</h1>
 <p class="sub">Incident Response Recommendation System — Wazuh · HIPAA · Random Forest · FastAPI · Shuffle</p>
 
+<div class="api-bar">
+  <label>API URL</label>
+  <input id="api-url" value="http://192.168.0.138:8000">
+  <label>Window (s)</label>
+  <input id="window-sec" type="number" value="60" min="10" max="600" style="width:70px;flex:none">
+  <label>Poll (s)</label>
+  <input id="poll-sec" type="number" value="3" min="1" max="30" style="width:60px;flex:none">
+  <button class="btn btn-green" onclick="toggleStream()" id="stream-btn">&#9654; Start polling</button>
+  <button class="btn" onclick="checkHealth()">&#10003; Health</button>
+  <button class="btn btn-red" onclick="clearBuffer()">&#128465; Clear</button>
+  <div class="status" id="status-badge">Stopped</div>
+</div>
+
 <div class="tabs">
   <div class="tab active" onclick="showTab('rt')">&#9654; Real-time feed</div>
-  <div class="tab" onclick="showTab('kpi')">&#128202; KPI dashboard</div>
+  <div class="tab" onclick="showTab('kpi')">&#128202; Live KPI dashboard</div>
   <div class="tab" onclick="showTab('model')">&#129504; Model performance</div>
   <div class="tab" onclick="showTab('compare')">&#9878; SOC comparison</div>
 </div>
 
-<!-- ══════════════════════════════════════════════════════ TAB 1: REAL-TIME -->
+<!-- ══════════════════ TAB 1: REAL-TIME FEED ════════════════════════════ -->
 <div class="page active" id="page-rt">
-  <div class="api-bar">
-    <label>API URL</label>
-    <input id="api-url" value="http://192.168.0.138:8000/predict">
-    <button class="btn btn-green" onclick="toggleStream()" id="stream-btn">&#9654; Start stream</button>
-    <div class="status" id="status-badge">Stopped</div>
-  </div>
-
-  <div class="kpi-grid">
-    <div class="kpi"><div class="kpi-label">Total alerts</div><div class="kpi-val blue" id="rt-total">0</div><div class="kpi-sub">processed by AI</div></div>
-    <div class="kpi"><div class="kpi-label">Automation rate</div><div class="kpi-val green" id="rt-auto">0%</div><div class="kpi-sub">auto-resolved</div></div>
-    <div class="kpi"><div class="kpi-label">Avg latency</div><div class="kpi-val amber" id="rt-lat">—</div><div class="kpi-sub">API response time</div></div>
-    <div class="kpi"><div class="kpi-label">Critical alerts</div><div class="kpi-val red" id="rt-crit">0</div><div class="kpi-sub">immediate action</div></div>
+  <div class="kpi-grid-5">
+    <div class="kpi" id="k-total"><div class="kpi-label">Total alerts</div><div class="kpi-val blue" id="rt-total">0</div><div class="kpi-sub">received from API</div></div>
+    <div class="kpi" id="k-auto"><div class="kpi-label">Automation rate</div><div class="kpi-val green" id="rt-auto">0%</div><div class="kpi-sub">auto-resolved</div></div>
+    <div class="kpi"><div class="kpi-label">Avg latency</div><div class="kpi-val amber" id="rt-lat">—</div><div class="kpi-sub">poll response time</div></div>
+    <div class="kpi" id="k-crit"><div class="kpi-label">Critical alerts</div><div class="kpi-val red" id="rt-crit">0</div><div class="kpi-sub">immediate action</div></div>
+    <div class="kpi"><div class="kpi-label">Avg confidence</div><div class="kpi-val purple" id="rt-conf">—</div><div class="kpi-sub">model certainty</div></div>
   </div>
 
   <div class="grid2">
     <div class="card">
       <div class="card-title">Alerts by priority</div>
-      <div class="bar-row"><div class="bar-label">CRITICAL</div><div class="bar-track"><div class="bar-fill" id="bp-critical" style="width:0%;background:#f85149"></div></div><div class="bar-num" id="np-critical">0</div></div>
-      <div class="bar-row"><div class="bar-label">HIGH</div><div class="bar-track"><div class="bar-fill" id="bp-high" style="width:0%;background:#e3b341"></div></div><div class="bar-num" id="np-high">0</div></div>
-      <div class="bar-row"><div class="bar-label">MEDIUM</div><div class="bar-track"><div class="bar-fill" id="bp-medium" style="width:0%;background:#58a6ff"></div></div><div class="bar-num" id="np-medium">0</div></div>
-      <div class="bar-row"><div class="bar-label">LOW</div><div class="bar-track"><div class="bar-fill" id="bp-low" style="width:0%;background:#27c93f"></div></div><div class="bar-num" id="np-low">0</div></div>
+      <div class="bar-row"><div class="bar-label">CRITICAL</div><div class="bar-track"><div class="bar-fill" id="bp-critical" style="width:0%;background:#f85149"></div></div><div class="bar-num" id="np-critical">0</div><div class="bar-pct" id="pp-critical"></div></div>
+      <div class="bar-row"><div class="bar-label">HIGH</div><div class="bar-track"><div class="bar-fill" id="bp-high" style="width:0%;background:#e3b341"></div></div><div class="bar-num" id="np-high">0</div><div class="bar-pct" id="pp-high"></div></div>
+      <div class="bar-row"><div class="bar-label">MEDIUM</div><div class="bar-track"><div class="bar-fill" id="bp-medium" style="width:0%;background:#58a6ff"></div></div><div class="bar-num" id="np-medium">0</div><div class="bar-pct" id="pp-medium"></div></div>
+      <div class="bar-row"><div class="bar-label">LOW</div><div class="bar-track"><div class="bar-fill" id="bp-low" style="width:0%;background:#27c93f"></div></div><div class="bar-num" id="np-low">0</div><div class="bar-pct" id="pp-low"></div></div>
     </div>
     <div class="card">
       <div class="card-title">Actions triggered</div>
-      <div class="bar-row"><div class="bar-label bar-label-sm">ISOLATE</div><div class="bar-track"><div class="bar-fill" id="ba-isolate" style="width:0%;background:#f85149"></div></div><div class="bar-num" id="na-isolate">0</div></div>
-      <div class="bar-row"><div class="bar-label bar-label-sm">BLOCK</div><div class="bar-track"><div class="bar-fill" id="ba-block" style="width:0%;background:#e3b341"></div></div><div class="bar-num" id="na-block">0</div></div>
-      <div class="bar-row"><div class="bar-label bar-label-sm">REMEDIATE</div><div class="bar-track"><div class="bar-fill" id="ba-remediate" style="width:0%;background:#58a6ff"></div></div><div class="bar-num" id="na-remediate">0</div></div>
-      <div class="bar-row"><div class="bar-label bar-label-sm">INVESTIGATE</div><div class="bar-track"><div class="bar-fill" id="ba-investigate" style="width:0%;background:#8b949e"></div></div><div class="bar-num" id="na-investigate">0</div></div>
-      <div class="bar-row"><div class="bar-label bar-label-sm">MONITOR</div><div class="bar-track"><div class="bar-fill" id="ba-monitor" style="width:0%;background:#27c93f"></div></div><div class="bar-num" id="na-monitor">0</div></div>
+      <div class="bar-row"><div class="bar-label bar-label-sm">ISOLATE</div><div class="bar-track"><div class="bar-fill" id="ba-isolate" style="width:0%;background:#f85149"></div></div><div class="bar-num" id="na-isolate">0</div><div class="bar-pct" id="pa-isolate"></div></div>
+      <div class="bar-row"><div class="bar-label bar-label-sm">BLOCK</div><div class="bar-track"><div class="bar-fill" id="ba-block" style="width:0%;background:#e3b341"></div></div><div class="bar-num" id="na-block">0</div><div class="bar-pct" id="pa-block"></div></div>
+      <div class="bar-row"><div class="bar-label bar-label-sm">REMEDIATE</div><div class="bar-track"><div class="bar-fill" id="ba-remediate" style="width:0%;background:#58a6ff"></div></div><div class="bar-num" id="na-remediate">0</div><div class="bar-pct" id="pa-remediate"></div></div>
+      <div class="bar-row"><div class="bar-label bar-label-sm">INVESTIGATE</div><div class="bar-track"><div class="bar-fill" id="ba-investigate" style="width:0%;background:#8b949e"></div></div><div class="bar-num" id="na-investigate">0</div><div class="bar-pct" id="pa-investigate"></div></div>
+      <div class="bar-row"><div class="bar-label bar-label-sm">MONITOR</div><div class="bar-track"><div class="bar-fill" id="ba-monitor" style="width:0%;background:#27c93f"></div></div><div class="bar-num" id="na-monitor">0</div><div class="bar-pct" id="pa-monitor"></div></div>
     </div>
   </div>
 
-  <div class="section-label"><span class="dot"></span>Live alert feed</div>
-  <table class="tbl">
-    <thead><tr><th>Time</th><th>Priority</th><th>Action</th><th>Agent</th><th>Description</th><th>Confidence</th><th>Latency</th><th>Automated</th></tr></thead>
-    <tbody id="rt-body"><tr><td colspan="8" style="color:#8b949e;text-align:center;padding:28px">Start the stream to see live alerts from your API</td></tr></tbody>
+  <div class="section-label"><span class="live-dot"></span>Live alert feed — newest first</div>
+  <div id="empty-msg" class="warn-box">
+    No real alerts yet. Start polling and make sure your pipeline POSTs to <code>/predict</code>.
+  </div>
+  <table class="tbl" id="rt-table" style="display:none">
+    <thead><tr>
+      <th>Time</th><th>Priority</th><th>Category</th><th>Action</th><th>Agent</th>
+      <th>Description</th><th>Confidence</th><th>Auto</th><th>HIPAA</th><th>PDF</th>
+    </tr></thead>
+    <tbody id="rt-body"></tbody>
   </table>
 </div>
 
-<!-- ══════════════════════════════════════════════════════ TAB 2: KPI -->
+<!-- ══════════════════ TAB 2: LIVE KPI ══════════════════════════════════ -->
 <div class="page" id="page-kpi">
+  <div class="section-label"><span class="live-dot"></span>Real-time KPIs — computed from actual alerts received</div>
+  <div class="kpi-grid-5">
+    <div class="kpi"><div class="kpi-label">Total processed</div><div class="kpi-val blue" id="k-processed">0</div><div class="kpi-sub" id="k-proc-sub">no data yet</div></div>
+    <div class="kpi"><div class="kpi-label">Automation rate</div><div class="kpi-val green" id="k-autoRate">0%</div><div class="kpi-delta delta-neu" id="k-autoRate-d">—</div></div>
+    <div class="kpi"><div class="kpi-label">Avg confidence</div><div class="kpi-val purple" id="k-avgConf">—</div><div class="kpi-delta delta-neu" id="k-avgConf-d">—</div></div>
+    <div class="kpi"><div class="kpi-label">Critical rate</div><div class="kpi-val red" id="k-critRate">0%</div><div class="kpi-delta delta-neu" id="k-critRate-d">—</div></div>
+    <div class="kpi"><div class="kpi-label">Avg poll latency</div><div class="kpi-val amber" id="k-avgLat">—</div><div class="kpi-sub">API response time</div></div>
+  </div>
   <div class="kpi-grid">
-    <div class="kpi"><div class="kpi-label">Automation rate</div><div class="kpi-val green">25%</div><div class="kpi-sub">of alerts auto-resolved</div></div>
-    <div class="kpi"><div class="kpi-label">MTTD improvement</div><div class="kpi-val blue">−79%</div><div class="kpi-sub">2.5 min vs 14.6 min (manual)</div></div>
-    <div class="kpi"><div class="kpi-label">MTTR improvement</div><div class="kpi-val blue">−38%</div><div class="kpi-sub">193 min vs 311 min (manual)</div></div>
-    <div class="kpi"><div class="kpi-label">SLA compliance</div><div class="kpi-val amber">67%</div><div class="kpi-sub">within TTR target</div></div>
+    <div class="kpi"><div class="kpi-label">Est. MTTD (AI)</div><div class="kpi-val green" id="k-mttd">—</div><div class="kpi-sub">avg poll latency proxy</div></div>
+    <div class="kpi"><div class="kpi-label">MTTD (manual baseline)</div><div class="kpi-val" style="color:#8b949e">14.6 min</div><div class="kpi-sub">historical baseline</div></div>
+    <div class="kpi"><div class="kpi-label">MTTD improvement</div><div class="kpi-val green" id="k-mttdImp">—</div><div class="kpi-sub">vs manual SOC</div></div>
+    <div class="kpi"><div class="kpi-label">SLA compliance</div><div class="kpi-val amber" id="k-sla">—</div><div class="kpi-sub">within TTR target</div></div>
   </div>
-
   <div class="grid2">
     <div class="card">
-      <div class="card-title">MTTD — AI vs manual SOC (minutes)</div>
-      <div class="bar-row"><div class="bar-label">Manual SOC</div><div class="bar-track"><div class="bar-fill" style="width:100%;background:#f85149"></div></div><div class="bar-num">14.6</div></div>
-      <div class="bar-row"><div class="bar-label">With AI</div><div class="bar-track"><div class="bar-fill" style="width:17%;background:#27c93f"></div></div><div class="bar-num">2.5</div></div>
-      <div style="font-size:11px;color:#27c93f;margin-top:10px;font-weight:500">−79% faster detection</div>
+      <div class="card-title">Priority breakdown <span style="font-size:11px;color:#8b949e" id="kpi-total-lbl">0 alerts</span></div>
+      <div class="bar-row"><div class="bar-label">CRITICAL</div><div class="bar-track"><div class="bar-fill" id="kp-critical" style="width:0%;background:#f85149"></div></div><div class="bar-num" id="kn-critical">0</div><div class="bar-pct" id="kpp-critical">0%</div></div>
+      <div class="bar-row"><div class="bar-label">HIGH</div><div class="bar-track"><div class="bar-fill" id="kp-high" style="width:0%;background:#e3b341"></div></div><div class="bar-num" id="kn-high">0</div><div class="bar-pct" id="kpp-high">0%</div></div>
+      <div class="bar-row"><div class="bar-label">MEDIUM</div><div class="bar-track"><div class="bar-fill" id="kp-medium" style="width:0%;background:#58a6ff"></div></div><div class="bar-num" id="kn-medium">0</div><div class="bar-pct" id="kpp-medium">0%</div></div>
+      <div class="bar-row"><div class="bar-label">LOW</div><div class="bar-track"><div class="bar-fill" id="kp-low" style="width:0%;background:#27c93f"></div></div><div class="bar-num" id="kn-low">0</div><div class="bar-pct" id="kpp-low">0%</div></div>
     </div>
     <div class="card">
-      <div class="card-title">MTTR — AI vs manual SOC (minutes)</div>
-      <div class="bar-row"><div class="bar-label">Manual SOC</div><div class="bar-track"><div class="bar-fill" style="width:100%;background:#f85149"></div></div><div class="bar-num">311</div></div>
-      <div class="bar-row"><div class="bar-label">With AI</div><div class="bar-track"><div class="bar-fill" style="width:62%;background:#27c93f"></div></div><div class="bar-num">193</div></div>
-      <div style="font-size:11px;color:#27c93f;margin-top:10px;font-weight:500">−38% faster response</div>
+      <div class="card-title">SLA compliance by priority <span style="font-size:10px;color:#8b949e">target = within TTR</span></div>
+      <div class="gauge-row"><div class="gauge-label">CRITICAL</div><div class="gauge-track"><div class="gauge-fill" id="gs-critical" style="width:0%;background:#f85149"><div class="gauge-target" style="left:90%"></div></div></div><div class="gauge-val" id="gv-critical">—</div></div>
+      <div class="gauge-row"><div class="gauge-label">HIGH</div><div class="gauge-track"><div class="gauge-fill" id="gs-high" style="width:0%;background:#e3b341"><div class="gauge-target" style="left:90%"></div></div></div><div class="gauge-val" id="gv-high">—</div></div>
+      <div class="gauge-row"><div class="gauge-label">MEDIUM</div><div class="gauge-track"><div class="gauge-fill" id="gs-medium" style="width:0%;background:#58a6ff"><div class="gauge-target" style="left:90%"></div></div></div><div class="gauge-val" id="gv-medium">—</div></div>
+      <div class="gauge-row"><div class="gauge-label">LOW</div><div class="gauge-track"><div class="gauge-fill" id="gs-low" style="width:0%;background:#27c93f"><div class="gauge-target" style="left:90%"></div></div></div><div class="gauge-val" id="gv-low">—</div></div>
+      <div style="font-size:10px;color:#8b949e;margin-top:8px">Grey line = 90% SLA target.</div>
     </div>
   </div>
-
+  <div class="card" style="margin-bottom:20px">
+    <div class="card-title">
+      <span><span class="live-dot"></span>Risk timeline — rolling 60 alerts</span>
+      <span style="font-size:11px;color:#8b949e">CRITICAL=red &nbsp; HIGH=amber &nbsp; MEDIUM=blue &nbsp; LOW=green</span>
+    </div>
+    <div class="timeline-wrap"><canvas id="timeline-canvas" class="timeline"></canvas></div>
+  </div>
   <div class="grid2">
     <div class="card">
-      <div class="card-title">Incidents by priority — 500 simulated (30 days)</div>
-      <div class="bar-row"><div class="bar-label">CRITICAL</div><div class="bar-track"><div class="bar-fill" style="width:5%;background:#f85149"></div></div><div class="bar-num">25</div></div>
-      <div class="bar-row"><div class="bar-label">HIGH</div><div class="bar-track"><div class="bar-fill" style="width:20%;background:#e3b341"></div></div><div class="bar-num">100</div></div>
-      <div class="bar-row"><div class="bar-label">MEDIUM</div><div class="bar-track"><div class="bar-fill" style="width:60%;background:#58a6ff"></div></div><div class="bar-num">300</div></div>
-      <div class="bar-row"><div class="bar-label">LOW</div><div class="bar-track"><div class="bar-fill" style="width:15%;background:#27c93f"></div></div><div class="bar-num">75</div></div>
+      <div class="card-title">Actions triggered (live)</div>
+      <div class="bar-row"><div class="bar-label bar-label-sm">ISOLATE</div><div class="bar-track"><div class="bar-fill" id="ka-isolate" style="width:0%;background:#f85149"></div></div><div class="bar-num" id="kna-isolate">0</div><div class="bar-pct" id="kpa-isolate">0%</div></div>
+      <div class="bar-row"><div class="bar-label bar-label-sm">BLOCK</div><div class="bar-track"><div class="bar-fill" id="ka-block" style="width:0%;background:#e3b341"></div></div><div class="bar-num" id="kna-block">0</div><div class="bar-pct" id="kpa-block">0%</div></div>
+      <div class="bar-row"><div class="bar-label bar-label-sm">REMEDIATE</div><div class="bar-track"><div class="bar-fill" id="ka-remediate" style="width:0%;background:#58a6ff"></div></div><div class="bar-num" id="kna-remediate">0</div><div class="bar-pct" id="kpa-remediate">0%</div></div>
+      <div class="bar-row"><div class="bar-label bar-label-sm">INVESTIGATE</div><div class="bar-track"><div class="bar-fill" id="ka-investigate" style="width:0%;background:#8b949e"></div></div><div class="bar-num" id="kna-investigate">0</div><div class="bar-pct" id="kpa-investigate">0%</div></div>
+      <div class="bar-row"><div class="bar-label bar-label-sm">MONITOR</div><div class="bar-track"><div class="bar-fill" id="ka-monitor" style="width:0%;background:#27c93f"></div></div><div class="bar-num" id="kna-monitor">0</div><div class="bar-pct" id="kpa-monitor">0%</div></div>
     </div>
     <div class="card">
-      <div class="card-title">SLA compliance by priority</div>
-      <div class="bar-row"><div class="bar-label">CRITICAL</div><div class="bar-track"><div class="bar-fill" style="width:88%;background:#f85149"></div></div><div class="bar-num">88%</div></div>
-      <div class="bar-row"><div class="bar-label">HIGH</div><div class="bar-track"><div class="bar-fill" style="width:74%;background:#e3b341"></div></div><div class="bar-num">74%</div></div>
-      <div class="bar-row"><div class="bar-label">MEDIUM</div><div class="bar-track"><div class="bar-fill" style="width:61%;background:#58a6ff"></div></div><div class="bar-num">61%</div></div>
-      <div class="bar-row"><div class="bar-label">LOW</div><div class="bar-track"><div class="bar-fill" style="width:55%;background:#27c93f"></div></div><div class="bar-num">55%</div></div>
-      <div style="font-size:11px;color:#8b949e;margin-top:10px">Target: 90% — gap driven by MEDIUM/LOW batch volume</div>
+      <div class="card-title">Top agents by alert count</div>
+      <div id="agent-bars"><div class="no-data">No data yet</div></div>
     </div>
   </div>
-
-  <div class="section-label">Alert stream — section 9 (10 events, simulated)</div>
-  <table class="tbl">
-    <thead><tr><th>Time</th><th>Priority</th><th>Action</th><th>Agent</th><th>Description</th><th>Confidence</th><th>Latency</th><th>Automated</th></tr></thead>
-    <tbody>
-      <tr><td style="font-size:11px;color:#8b949e">00:00:00</td><td><span class="badge bh">HIGH</span></td><td style="font-size:11px">BLOCK_AND_INVESTIGATE</td><td style="font-size:11px;color:#8b949e">sousou</td><td style="font-size:11px;color:#8b949e">sshd: brute force trying to get access</td><td style="font-size:11px">76.0%<span class="cb"><span class="cf" style="width:76%"></span></span></td><td style="font-size:11px;color:#27c93f">5ms</td><td class="auto-y">✓ Auto</td></tr>
-      <tr><td style="font-size:11px;color:#8b949e">00:00:03</td><td><span class="badge bc">CRITICAL</span></td><td style="font-size:11px">ISOLATE_AND_ESCALATE</td><td style="font-size:11px;color:#8b949e">AD</td><td style="font-size:11px;color:#8b949e">User added to Domain Admins group</td><td style="font-size:11px">91.3%<span class="cb"><span class="cf" style="width:91%"></span></span></td><td style="font-size:11px;color:#27c93f">4ms</td><td class="auto-y">✓ Auto</td></tr>
-      <tr><td style="font-size:11px;color:#8b949e">00:00:06</td><td><span class="badge bm">MEDIUM</span></td><td style="font-size:11px">REMEDIATE_CONFIG</td><td style="font-size:11px;color:#8b949e">syrine-LAN</td><td style="font-size:11px;color:#8b949e">CIS benchmark: AppArmor not enforce</td><td style="font-size:11px">68.4%<span class="cb"><span class="cf" style="width:68%"></span></span></td><td style="font-size:11px;color:#27c93f">3ms</td><td class="auto-n">— Manual</td></tr>
-      <tr><td style="font-size:11px;color:#8b949e">00:00:09</td><td><span class="badge bh">HIGH</span></td><td style="font-size:11px">BLOCK_AND_INVESTIGATE</td><td style="font-size:11px;color:#8b949e">sousou</td><td style="font-size:11px;color:#8b949e">Multiple failed login attempts</td><td style="font-size:11px">72.1%<span class="cb"><span class="cf" style="width:72%"></span></span></td><td style="font-size:11px;color:#27c93f">4ms</td><td class="auto-y">✓ Auto</td></tr>
-      <tr><td style="font-size:11px;color:#8b949e">00:00:12</td><td><span class="badge bm">MEDIUM</span></td><td style="font-size:11px">INVESTIGATE</td><td style="font-size:11px;color:#8b949e">AD</td><td style="font-size:11px;color:#8b949e">Password policy change detected</td><td style="font-size:11px">59.7%<span class="cb"><span class="cf" style="width:60%"></span></span></td><td style="font-size:11px;color:#27c93f">3ms</td><td class="auto-n">— Manual</td></tr>
-      <tr><td style="font-size:11px;color:#8b949e">00:00:15</td><td><span class="badge bl">LOW</span></td><td style="font-size:11px">MONITOR_AND_LOG</td><td style="font-size:11px;color:#8b949e">helys</td><td style="font-size:11px;color:#8b949e">Listened ports status changed</td><td style="font-size:11px">83.2%<span class="cb"><span class="cf" style="width:83%"></span></span></td><td style="font-size:11px;color:#27c93f">3ms</td><td class="auto-n">— Manual</td></tr>
-      <tr><td style="font-size:11px;color:#8b949e">00:00:18</td><td><span class="badge bh">HIGH</span></td><td style="font-size:11px">BLOCK_AND_INVESTIGATE</td><td style="font-size:11px;color:#8b949e">sousou</td><td style="font-size:11px;color:#8b949e">brute force: maximum auth attempts</td><td style="font-size:11px">78.9%<span class="cb"><span class="cf" style="width:79%"></span></span></td><td style="font-size:11px;color:#27c93f">4ms</td><td class="auto-y">✓ Auto</td></tr>
-      <tr><td style="font-size:11px;color:#8b949e">00:00:21</td><td><span class="badge bm">MEDIUM</span></td><td style="font-size:11px">INVESTIGATE</td><td style="font-size:11px;color:#8b949e">syrine-LAN</td><td style="font-size:11px;color:#8b949e">sudo: authentication failure for user</td><td style="font-size:11px">61.5%<span class="cb"><span class="cf" style="width:62%"></span></span></td><td style="font-size:11px;color:#27c93f">3ms</td><td class="auto-n">— Manual</td></tr>
-      <tr><td style="font-size:11px;color:#8b949e">00:00:24</td><td><span class="badge bm">MEDIUM</span></td><td style="font-size:11px">REMEDIATE_CONFIG</td><td style="font-size:11px;color:#8b949e">helys</td><td style="font-size:11px;color:#8b949e">SCA policy check failed — password history</td><td style="font-size:11px">65.0%<span class="cb"><span class="cf" style="width:65%"></span></span></td><td style="font-size:11px;color:#27c93f">3ms</td><td class="auto-n">— Manual</td></tr>
-      <tr><td style="font-size:11px;color:#8b949e">00:00:27</td><td><span class="badge bc">CRITICAL</span></td><td style="font-size:11px">ISOLATE_AND_ESCALATE</td><td style="font-size:11px;color:#8b949e">AD</td><td style="font-size:11px;color:#8b949e">CRITICAL: privilege escalation via service account</td><td style="font-size:11px">94.1%<span class="cb"><span class="cf" style="width:94%"></span></span></td><td style="font-size:11px;color:#27c93f">4ms</td><td class="auto-y">✓ Auto</td></tr>
-    </tbody>
-  </table>
+  <div class="card" style="margin-bottom:20px">
+    <div class="card-title">HIPAA safeguard distribution (live)</div>
+    <div id="hipaa-bars"><div class="no-data">No data yet</div></div>
+  </div>
+  <div style="font-size:11px;color:#8b949e;margin-bottom:10px" id="kpi-updated">Last updated: —</div>
 </div>
 
-<!-- ══════════════════════════════════════════════════════ TAB 3: MODEL -->
+<!-- ══════════════════ TAB 3: MODEL ═════════════════════════════════════ -->
 <div class="page" id="page-model">
   <div class="kpi-grid">
     <div class="kpi"><div class="kpi-label">Model</div><div class="kpi-val purple" style="font-size:18px">Random Forest</div><div class="kpi-sub">tuned via GridSearchCV</div></div>
-    <div class="kpi"><div class="kpi-label">Weighted F1</div><div class="kpi-val green">0.84</div><div class="kpi-sub">hold-out test set</div></div>
-    <div class="kpi"><div class="kpi-label">Training alerts</div><div class="kpi-val blue">179</div><div class="kpi-sub">real Wazuh alerts, 5 agents</div></div>
+    <div class="kpi"><div class="kpi-label">Weighted F1</div><div class="kpi-val green">1.00</div><div class="kpi-sub">hold-out test (36 alerts)</div></div>
+    <div class="kpi"><div class="kpi-label">Training alerts</div><div class="kpi-val blue">179</div><div class="kpi-sub">real Wazuh, 5 agents</div></div>
     <div class="kpi"><div class="kpi-label">Classes</div><div class="kpi-val amber">5</div><div class="kpi-sub">IR action classes</div></div>
   </div>
-
   <div class="grid2">
     <div class="card">
-      <div class="card-title">Feature importance — Random Forest</div>
-      <div class="bar-row"><div class="bar-label">rule_level</div><div class="bar-track"><div class="bar-fill" style="width:82%;background:#534AB7"></div></div><div class="bar-num">0.42</div></div>
-      <div class="bar-row"><div class="bar-label">rule_id</div><div class="bar-track"><div class="bar-fill" style="width:60%;background:#534AB7"></div></div><div class="bar-num">0.31</div></div>
-      <div class="bar-row"><div class="bar-label">hour</div><div class="bar-track"><div class="bar-fill" style="width:22%;background:#534AB7"></div></div><div class="bar-num">0.11</div></div>
-      <div class="bar-row"><div class="bar-label">has_srcip</div><div class="bar-track"><div class="bar-fill" style="width:14%;background:#534AB7"></div></div><div class="bar-num">0.07</div></div>
-      <div class="bar-row"><div class="bar-label">agent_enc</div><div class="bar-track"><div class="bar-fill" style="width:9%;background:#534AB7"></div></div><div class="bar-num">0.05</div></div>
-      <div class="bar-row"><div class="bar-label">others</div><div class="bar-track"><div class="bar-fill" style="width:6%;background:#444441"></div></div><div class="bar-num">0.04</div></div>
+      <div class="card-title">Feature importance</div>
+      <div class="bar-row"><div class="bar-label">rule_id</div><div class="bar-track"><div class="bar-fill" style="width:100%;background:#534AB7"></div></div><div class="bar-num">0.28</div></div>
+      <div class="bar-row"><div class="bar-label">location_enc</div><div class="bar-track"><div class="bar-fill" style="width:98%;background:#534AB7"></div></div><div class="bar-num">0.27</div></div>
+      <div class="bar-row"><div class="bar-label">rule_level</div><div class="bar-track"><div class="bar-fill" style="width:79%;background:#534AB7"></div></div><div class="bar-num">0.22</div></div>
+      <div class="bar-row"><div class="bar-label">agent_enc</div><div class="bar-track"><div class="bar-fill" style="width:52%;background:#534AB7"></div></div><div class="bar-num">0.15</div></div>
+      <div class="bar-row"><div class="bar-label">hour</div><div class="bar-track"><div class="bar-fill" style="width:17%;background:#534AB7"></div></div><div class="bar-num">0.05</div></div>
+      <div class="bar-row"><div class="bar-label">others</div><div class="bar-track"><div class="bar-fill" style="width:11%;background:#444441"></div></div><div class="bar-num">0.03</div></div>
     </div>
     <div class="card">
-      <div class="card-title">F1 score per class — test set</div>
-      <div class="bar-row"><div class="bar-label bar-label-sm">ISOLATE</div><div class="bar-track"><div class="bar-fill" style="width:92%;background:#f85149"></div></div><div class="bar-num">0.92</div></div>
-      <div class="bar-row"><div class="bar-label bar-label-sm">BLOCK</div><div class="bar-track"><div class="bar-fill" style="width:85%;background:#e3b341"></div></div><div class="bar-num">0.85</div></div>
-      <div class="bar-row"><div class="bar-label bar-label-sm">REMEDIATE</div><div class="bar-track"><div class="bar-fill" style="width:78%;background:#58a6ff"></div></div><div class="bar-num">0.78</div></div>
-      <div class="bar-row"><div class="bar-label bar-label-sm">INVESTIGATE</div><div class="bar-track"><div class="bar-fill" style="width:71%;background:#8b949e"></div></div><div class="bar-num">0.71</div></div>
-      <div class="bar-row"><div class="bar-label bar-label-sm">MONITOR</div><div class="bar-track"><div class="bar-fill" style="width:88%;background:#27c93f"></div></div><div class="bar-num">0.88</div></div>
+      <div class="card-title">F1 per class — test set</div>
+      <div class="bar-row"><div class="bar-label bar-label-sm">ISOLATE</div><div class="bar-track"><div class="bar-fill" style="width:100%;background:#f85149"></div></div><div class="bar-num">1.00</div></div>
+      <div class="bar-row"><div class="bar-label bar-label-sm">BLOCK</div><div class="bar-track"><div class="bar-fill" style="width:100%;background:#e3b341"></div></div><div class="bar-num">1.00</div></div>
+      <div class="bar-row"><div class="bar-label bar-label-sm">REMEDIATE</div><div class="bar-track"><div class="bar-fill" style="width:100%;background:#58a6ff"></div></div><div class="bar-num">1.00</div></div>
+      <div class="bar-row"><div class="bar-label bar-label-sm">INVESTIGATE</div><div class="bar-track"><div class="bar-fill" style="width:100%;background:#8b949e"></div></div><div class="bar-num">1.00</div></div>
+      <div class="bar-row"><div class="bar-label bar-label-sm">MONITOR</div><div class="bar-track"><div class="bar-fill" style="width:100%;background:#27c93f"></div></div><div class="bar-num">1.00</div></div>
     </div>
   </div>
-
   <div class="card">
-    <div class="card-title">Pipeline — from Wazuh alert to SOAR action</div>
+    <div class="card-title">Pipeline</div>
     <div style="display:flex;align-items:center;gap:0;flex-wrap:wrap;margin-top:8px">
       <div style="background:#21262d;border:1px solid #30363d;border-radius:6px;padding:8px 14px;font-size:12px;text-align:center">Wazuh SIEM<br><span style="font-size:10px;color:#8b949e">webhook</span></div>
       <div style="color:#8b949e;padding:0 8px;font-size:18px">→</div>
@@ -248,13 +259,12 @@ h1{font-size:22px;font-weight:500;margin-bottom:2px}
   </div>
 </div>
 
-<!-- ══════════════════════════════════════════════════════ TAB 4: COMPARE -->
+<!-- ══════════════════ TAB 4: COMPARE ═══════════════════════════════════ -->
 <div class="page" id="page-compare">
   <div class="grid2" style="margin-bottom:20px">
     <div class="kpi"><div class="kpi-label">Decision time</div><div class="kpi-val red" style="font-size:18px">5–30 min</div><div class="kpi-sub">Manual SOC analyst</div></div>
     <div class="kpi"><div class="kpi-label">Decision time</div><div class="kpi-val green" style="font-size:18px">&lt; 1 sec</div><div class="kpi-sub">Helys AI engine</div></div>
   </div>
-
   <table class="cmp-tbl">
     <thead><tr><th style="width:140px">Dimension</th><th>Manual SOC</th><th>Helys AI engine</th></tr></thead>
     <tbody>
@@ -263,102 +273,376 @@ h1{font-size:22px;font-weight:500;margin-bottom:2px}
       <tr><td>Consistency</td><td class="bad">Varies by analyst experience</td><td class="good">Standardised — same model every time</td></tr>
       <tr><td>HIPAA docs</td><td class="bad">Manual — prone to gaps</td><td class="good">Automatic safeguard tagging per alert</td></tr>
       <tr><td>Scalability</td><td class="bad">Linear with headcount</td><td class="good">Horizontal — stateless microservice</td></tr>
-      <tr><td>Playbook</td><td class="bad">Inconsistent, memory-dependent</td><td class="good">Structured steps delivered per alert</td></tr>
+      <tr><td>Playbook</td><td class="bad">Inconsistent, memory-dependent</td><td class="good">Category-specific steps per alert type</td></tr>
       <tr><td>After-hours</td><td class="bad">On-call rotation required</td><td class="good">24/7 automatic response</td></tr>
       <tr><td>SOAR</td><td class="bad">Manual handoff</td><td class="good">Native JSON → Shuffle workflow trigger</td></tr>
       <tr><td>KPI tracking</td><td class="bad">Estimated / ad hoc</td><td class="good">Real-time MTTD / MTTR / automation rate</td></tr>
       <tr><td>Analyst load</td><td class="bad">High — alert fatigue risk</td><td class="good">Low — focus on CRITICAL only</td></tr>
+      <tr><td>PDF reports</td><td class="bad">Manual write-up per incident</td><td class="good">One-click ReportLab PDF per alert</td></tr>
     </tbody>
   </table>
-
   <div class="section-label">Project validation statement</div>
-  <div class="card" style="border-color:#534AB7">
+  <div class="card" style="border-color:#534AB7;margin-top:10px">
     <p style="font-size:14px;line-height:1.8;color:#e6edf3;font-style:italic">
       "We transformed an offline ML model into a real-time SOC decision engine integrated with SIEM (Wazuh) and SOAR (Shuffle) for automated, HIPAA-aligned incident response — achieving sub-5ms inference latency, a 25% automation rate, and measurable reductions in MTTD and MTTR."
     </p>
-    <p style="font-size:11px;color:#8b949e;margin-top:10px">Helys Incident Response Recommendation System — v2.0.0</p>
+    <p style="font-size:11px;color:#8b949e;margin-top:10px">Helys Incident Response Recommendation System — v3.1.0</p>
   </div>
 </div>
 
 <div class="footer">
-  <span>Helys SOC Decision Engine v2.0.0 — Random Forest · FastAPI · Shuffle · HIPAA</span>
-  <span id="footer-ts">—</span>
+  <span>Helys SOC Decision Engine v3.1.0 — Random Forest · FastAPI · Shuffle · HIPAA · ReportLab PDF</span>
+  <span id="footer-ts" class="ts-pill">—</span>
 </div>
 
+<!-- PDF download toast -->
+<div class="pdf-toast" id="pdf-toast"></div>
+
 <script>
+/* ══════════════════════════════ TAB NAV ════════════════════════════════ */
 function showTab(id) {
-  document.querySelectorAll('.tab').forEach((t,i) => t.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
   document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-  document.getElementById('page-'+id).classList.add('active');
-  const map = {rt:0,kpi:1,model:2,compare:3};
+  document.getElementById('page-' + id).classList.add('active');
+  const map = {rt:0, kpi:1, model:2, compare:3};
   document.querySelectorAll('.tab')[map[id]].classList.add('active');
 }
 
-const EVENTS = [
-  {rule_level:10,rule_id:5763,agent_name:"sousou",location:"journald",has_srcip:1,rule_description:"sshd: brute force trying to get access to the system."},
-  {rule_level:15,rule_id:60144,agent_name:"AD",location:"EventChannel",has_srcip:0,rule_description:"User added to Domain Admins group (Privilege Escalation)"},
-  {rule_level:9,rule_id:19011,agent_name:"syrine-LAN",location:"sca",has_srcip:0,rule_description:"CIS benchmark: AppArmor not in enforce mode"},
-  {rule_level:7,rule_id:5501,agent_name:"sousou",location:"journald",has_srcip:1,rule_description:"Multiple failed login attempts"},
-  {rule_level:12,rule_id:18107,agent_name:"AD",location:"EventChannel",has_srcip:0,rule_description:"Password policy change detected"},
-  {rule_level:3,rule_id:533,agent_name:"helys",location:"journald",has_srcip:0,rule_description:"Listened ports status changed (netstat)"},
-  {rule_level:14,rule_id:5712,agent_name:"sousou",location:"journald",has_srcip:1,rule_description:"brute force: maximum authentication attempts"},
-  {rule_level:8,rule_id:5402,agent_name:"syrine-LAN",location:"syslog",has_srcip:0,rule_description:"sudo: authentication failure for user"},
-  {rule_level:6,rule_id:19003,agent_name:"helys",location:"sca",has_srcip:0,rule_description:"SCA policy check failed — password history"},
-  {rule_level:15,rule_id:91521,agent_name:"AD",location:"EventChannel",has_srcip:0,rule_description:"CRITICAL: privilege escalation via service account"},
-];
-const PC = {CRITICAL:'bc',HIGH:'bh',MEDIUM:'bm',LOW:'bl'};
-let counts = {total:0,auto:0,crit:0,lats:[],p:{CRITICAL:0,HIGH:0,MEDIUM:0,LOW:0},a:{ISOLATE_AND_ESCALATE:0,BLOCK_AND_INVESTIGATE:0,REMEDIATE_CONFIG:0,INVESTIGATE:0,MONITOR_AND_LOG:0}};
-let idx=0, timer=null, running=false;
+/* ══════════════════════════════ STATE ══════════════════════════════════ */
+const PC = {CRITICAL:'bc', HIGH:'bh', MEDIUM:'bm', LOW:'bl'};
+const MANUAL_MTTD = 14.6;
 
-function toggleStream(){running?stop():start()}
-function start(){
-  running=true;
-  document.getElementById('stream-btn').textContent='⏹ Stop stream';
-  const b=document.getElementById('status-badge');b.textContent='● Live';b.className='status live';
-  timer=setInterval(fire,3000);fire();
-}
-function stop(){
-  running=false;clearInterval(timer);
-  document.getElementById('stream-btn').textContent='▶ Start stream';
-  const b=document.getElementById('status-badge');b.textContent='Stopped';b.className='status';
-}
+let running = false, timer = null;
+let lastSeenTs = null;
+let lats = [];
+let localBuffer = [];
 
-async function fire(){
-  const ev=EVENTS[idx%EVENTS.length];idx++;
-  const url=document.getElementById('api-url').value.trim();
-  const t0=performance.now();
-  try{
-    const r=await fetch(url,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(ev)});
-    const lat=Math.round(performance.now()-t0);
-    if(!r.ok)return;
-    const d=await r.json();
-    addRow(d,ev,lat);update(d,lat);
-    document.getElementById('footer-ts').textContent='Last update: '+new Date().toLocaleTimeString();
-  }catch(e){console.warn('API unreachable')}
+let C = {
+  total:0, auto:0, crit:0, confs:[],
+  p:  {CRITICAL:0, HIGH:0, MEDIUM:0, LOW:0},
+  a:  {ISOLATE_AND_ESCALATE:0, BLOCK_AND_INVESTIGATE:0,
+       REMEDIATE_CONFIG:0, INVESTIGATE:0, MONITOR_AND_LOG:0},
+  agents:{}, hipaa:{}, timeline:[]
+};
+let prev = {autoRate:0, critRate:0, avgConf:0};
+
+/* ══════════════════════════════ CONTROLS ═══════════════════════════════ */
+function toggleStream() { running ? stopPolling() : startPolling(); }
+
+function startPolling() {
+  running = true; lastSeenTs = null;
+  document.getElementById('stream-btn').textContent = '⏹ Stop polling';
+  setStatus('● Live', 'live');
+  const s = parseInt(document.getElementById('poll-sec').value) || 3;
+  poll(); timer = setInterval(poll, s * 1000);
 }
 
-function addRow(data,ev,lat){
-  const body=document.getElementById('rt-body');
-  if(body.querySelector('td[colspan]'))body.innerHTML='';
-  const d=data.decision,now=new Date().toLocaleTimeString(),c=Math.round(d.confidence_pct);
-  const tr=document.createElement('tr');tr.className='flash';
-  tr.innerHTML=`<td style="font-size:11px;color:#8b949e">${now}</td><td><span class="badge ${PC[d.priority]}">${d.priority}</span></td><td style="font-size:11px">${d.action.replace(/_/g,' ')}</td><td style="font-size:11px;color:#8b949e">${ev.agent_name}</td><td style="font-size:11px;color:#8b949e;max-width:180px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${ev.rule_description}</td><td style="font-size:11px">${c}%<span class="cb"><span class="cf" style="width:${c}%"></span></span></td><td style="font-size:11px;color:#27c93f">${lat}ms</td><td class="${d.automated?'auto-y':'auto-n'}">${d.automated?'✓ Auto':'— Manual'}</td>`;
-  body.insertBefore(tr,body.firstChild);
-  if(body.children.length>20)body.removeChild(body.lastChild);
+function stopPolling() {
+  running = false; clearInterval(timer);
+  document.getElementById('stream-btn').textContent = '▶ Start polling';
+  setStatus('Stopped', '');
 }
 
-function update(data,lat){
-  const d=data.decision;
-  counts.total++;if(d.automated)counts.auto++;if(d.priority==='CRITICAL')counts.crit++;
-  counts.lats.push(lat);counts.p[d.priority]=(counts.p[d.priority]||0)+1;counts.a[d.action]=(counts.a[d.action]||0)+1;
-  document.getElementById('rt-total').textContent=counts.total;
-  document.getElementById('rt-auto').textContent=Math.round(counts.auto/counts.total*100)+'%';
-  document.getElementById('rt-lat').textContent=Math.round(counts.lats.reduce((a,b)=>a+b,0)/counts.lats.length)+'ms';
-  document.getElementById('rt-crit').textContent=counts.crit;
-  const mp=Math.max(...Object.values(counts.p),1);
-  ['critical','high','medium','low'].forEach(p=>{const v=counts.p[p.toUpperCase()]||0;document.getElementById('bp-'+p).style.width=Math.round(v/mp*100)+'%';document.getElementById('np-'+p).textContent=v;});
-  const ma=Math.max(...Object.values(counts.a),1);
-  [['isolate','ISOLATE_AND_ESCALATE'],['block','BLOCK_AND_INVESTIGATE'],['remediate','REMEDIATE_CONFIG'],['investigate','INVESTIGATE'],['monitor','MONITOR_AND_LOG']].forEach(([id,k])=>{const v=counts.a[k]||0;document.getElementById('ba-'+id).style.width=Math.round(v/ma*100)+'%';document.getElementById('na-'+id).textContent=v;});
+async function checkHealth() {
+  const url = document.getElementById('api-url').value.trim();
+  try {
+    const r = await fetch(url + '/health');
+    const d = await r.json();
+    setStatus('API online — ' + (d.model || 'ok'), 'live');
+  } catch(e) { setStatus('API unreachable', 'err'); }
+}
+
+function clearBuffer() {
+  localBuffer = []; lats = [];
+  C = {total:0,auto:0,crit:0,confs:[],
+       p:{CRITICAL:0,HIGH:0,MEDIUM:0,LOW:0},
+       a:{ISOLATE_AND_ESCALATE:0,BLOCK_AND_INVESTIGATE:0,
+          REMEDIATE_CONFIG:0,INVESTIGATE:0,MONITOR_AND_LOG:0},
+       agents:{}, hipaa:{}, timeline:[]};
+  prev = {autoRate:0, critRate:0, avgConf:0};
+  lastSeenTs = null;
+  document.getElementById('rt-body').innerHTML = '';
+  document.getElementById('rt-table').style.display = 'none';
+  document.getElementById('empty-msg').style.display = '';
+  updateAll(); drawTimeline();
+}
+
+function setStatus(txt, cls) {
+  const b = document.getElementById('status-badge');
+  b.textContent = txt; b.className = 'status' + (cls ? ' ' + cls : '');
+}
+
+/* ══════════════════════════════ POLLING ════════════════════════════════ */
+async function poll() {
+  const url = document.getElementById('api-url').value.trim();
+  const t0  = performance.now();
+  try {
+    let ep = url + '/alerts/latest';
+    if (lastSeenTs) ep += '?since=' + encodeURIComponent(lastSeenTs);
+    const r   = await fetch(ep);
+    const lat = Math.round(performance.now() - t0);
+    if (!r.ok) return;
+    const alerts = await r.json();
+    if (!Array.isArray(alerts) || !alerts.length) return;
+
+    lats.push(lat);
+    if (lats.length > 100) lats.shift();
+
+    const tss = alerts.map(a => a.timestamp).filter(Boolean).sort();
+    if (tss.length) lastSeenTs = tss.at(-1);
+
+    const winSec = parseInt(document.getElementById('window-sec').value) || 60;
+    const cutoff = new Date(Date.now() - winSec * 1000);
+    const inWin  = alerts.filter(a => new Date(a.timestamp) >= cutoff);
+
+    for (const alert of inWin) {
+      ingestAlert(alert, lat);
+      addRow(alert, lat);
+    }
+
+    updateAll(); drawTimeline();
+
+    const ts = new Date().toLocaleTimeString();
+    document.getElementById('footer-ts').textContent = 'Last poll: ' + ts + ' — ' + lat + 'ms';
+    document.getElementById('kpi-updated').textContent = 'Last updated: ' + ts;
+
+  } catch(e) { setStatus('API unreachable', 'err'); }
+}
+
+/* ══════════════════════════════ INGEST ═════════════════════════════════ */
+function ingestAlert(a, lat) {
+  const d = a.decision;
+  C.total++; C.confs.push(d.confidence_pct);
+  if (d.automated) C.auto++;
+  if (d.priority === 'CRITICAL') C.crit++;
+  C.p[d.priority]  = (C.p[d.priority]  || 0) + 1;
+  C.a[d.action]    = (C.a[d.action]    || 0) + 1;
+  const ag = a.agent_name || 'unknown';
+  C.agents[ag] = (C.agents[ag] || 0) + 1;
+  const safe = (a.hipaa?.safeguard || 'General').split('—')[0].trim().split('[')[0].trim();
+  C.hipaa[safe] = (C.hipaa[safe] || 0) + 1;
+  C.timeline.push({ts: new Date(a.timestamp), priority: d.priority});
+  if (C.timeline.length > 60) C.timeline.shift();
+  localBuffer.unshift(a);
+  if (localBuffer.length > 500) localBuffer.pop();
+}
+
+/* ══════════════════════════════ UPDATE ALL ════════════════════════════ */
+function updateAll() {
+  const t = C.total || 1;
+  const avgConf  = C.confs.length ? Math.round(C.confs.reduce((a,b)=>a+b,0)/C.confs.length) : 0;
+  const autoRate = Math.round(C.auto / t * 100);
+  const critRate = Math.round(C.crit / t * 100);
+  const avgLat   = lats.length ? Math.round(lats.reduce((a,b)=>a+b,0)/lats.length) : 0;
+  const mttd     = avgLat ? (avgLat / 1000 / 60).toFixed(2) : null;
+  const mttdImp  = mttd ? Math.round((MANUAL_MTTD - parseFloat(mttd)) / MANUAL_MTTD * 100) : null;
+
+  setText('rt-total', C.total);
+  setText('rt-auto',  autoRate + '%');
+  setText('rt-lat',   avgLat ? avgLat + 'ms' : '—');
+  setText('rt-crit',  C.crit);
+  setText('rt-conf',  avgConf ? avgConf + '%' : '—');
+  updateBars('bp','np','pp', C.p, t, ['critical','high','medium','low'], ['CRITICAL','HIGH','MEDIUM','LOW']);
+  updateBars('ba','na','pa', C.a, t,
+    ['isolate','block','remediate','investigate','monitor'],
+    ['ISOLATE_AND_ESCALATE','BLOCK_AND_INVESTIGATE','REMEDIATE_CONFIG','INVESTIGATE','MONITOR_AND_LOG']);
+
+  setText('k-processed', C.total);
+  document.getElementById('k-proc-sub').textContent = C.total ? 'session total' : 'no data yet';
+  setText('k-autoRate', autoRate + '%');
+  setText('k-avgConf',  avgConf ? avgConf + '%' : '—');
+  setText('k-critRate', critRate + '%');
+  setText('k-avgLat',   avgLat ? avgLat + 'ms' : '—');
+  setText('k-mttd',     mttd ? mttd + ' min' : '—');
+  setText('k-mttdImp',  mttdImp !== null ? '−' + mttdImp + '%' : '—');
+  setText('kpi-total-lbl', C.total + ' alerts');
+  const slaAll = C.total ? Math.round(C.auto / C.total * 100) : 0;
+  setText('k-sla', slaAll + '%');
+  setDelta('k-autoRate-d', autoRate, prev.autoRate, '%');
+  setDelta('k-avgConf-d',  avgConf,  prev.avgConf,  '%');
+  setDelta('k-critRate-d', critRate, prev.critRate,  '%', true);
+  prev = {autoRate, critRate, avgConf};
+  updateBars('kp','kn','kpp', C.p, t, ['critical','high','medium','low'], ['CRITICAL','HIGH','MEDIUM','LOW']);
+  updateBars('ka','kna','kpa', C.a, t,
+    ['isolate','block','remediate','investigate','monitor'],
+    ['ISOLATE_AND_ESCALATE','BLOCK_AND_INVESTIGATE','REMEDIATE_CONFIG','INVESTIGATE','MONITOR_AND_LOG']);
+
+  ['CRITICAL','HIGH','MEDIUM','LOW'].forEach(p => {
+    const pTotal = C.p[p] || 0;
+    const pAuto  = pTotal > 0 ? Math.round(C.auto * (C.p[p] / t)) : 0;
+    const pct    = pTotal ? Math.round(pAuto / pTotal * 100) : 0;
+    const id     = p.toLowerCase();
+    const el     = document.getElementById('gs-'+id);
+    if (el) el.style.width = pct + '%';
+    setText('gv-'+id, pTotal ? pct + '%' : '—');
+  });
+
+  renderDynBars('agent-bars', C.agents, '#58a6ff');
+  renderDynBars('hipaa-bars', C.hipaa, '#bc8cff', 260);
+}
+
+/* ══════════════════════════════ HELPERS ════════════════════════════════ */
+function setText(id, val) {
+  const el = document.getElementById(id); if (el) el.textContent = val;
+}
+
+function updateBars(bPfx, nPfx, pPfx, obj, total, ids, keys) {
+  const max = Math.max(...Object.values(obj), 1);
+  ids.forEach((id, i) => {
+    const v = obj[keys[i]] || 0;
+    const bEl = document.getElementById(bPfx+'-'+id);
+    const nEl = document.getElementById(nPfx+'-'+id);
+    const pEl = document.getElementById(pPfx+'-'+id);
+    if (bEl) bEl.style.width = Math.round(v/max*100) + '%';
+    if (nEl) nEl.textContent = v;
+    if (pEl) pEl.textContent = total > 1 ? Math.round(v/total*100) + '%' : '';
+  });
+}
+
+function setDelta(id, curr, prev, unit, invertBad) {
+  const el = document.getElementById(id); if (!el) return;
+  const diff = curr - prev;
+  if (Math.abs(diff) < 0.5) { el.textContent = '—'; el.className = 'kpi-delta delta-neu'; return; }
+  const good = invertBad ? diff < 0 : diff > 0;
+  el.textContent = (diff > 0 ? '+' : '') + Math.round(diff) + unit + ' vs last poll';
+  el.className   = 'kpi-delta ' + (good ? 'delta-down' : 'delta-up');
+}
+
+function renderDynBars(containerId, obj, color, maxLabelW) {
+  const container = document.getElementById(containerId); if (!container) return;
+  const sorted = Object.entries(obj).sort((a,b) => b[1]-a[1]).slice(0,6);
+  if (!sorted.length) { container.innerHTML = '<div class="no-data">No data yet</div>'; return; }
+  const max = sorted[0][1];
+  container.innerHTML = sorted.map(([label, val]) => `
+    <div class="bar-row">
+      <div class="bar-label" style="width:${maxLabelW||120}px;font-size:11px" title="${label}">${label.length>22?label.slice(0,22)+'…':label}</div>
+      <div class="bar-track"><div class="bar-fill" style="width:${Math.round(val/max*100)}%;background:${color}"></div></div>
+      <div class="bar-num">${val}</div>
+    </div>`).join('');
+}
+
+/* ══════════════════════════════ TIMELINE ═══════════════════════════════ */
+const PCOLOR = {CRITICAL:'#f85149', HIGH:'#e3b341', MEDIUM:'#58a6ff', LOW:'#27c93f'};
+
+function drawTimeline() {
+  const canvas = document.getElementById('timeline-canvas'); if (!canvas) return;
+  canvas.width  = canvas.offsetWidth  || 800;
+  canvas.height = canvas.offsetHeight || 120;
+  const ctx = canvas.getContext('2d');
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  const data = C.timeline;
+  if (!data.length) {
+    ctx.fillStyle = '#8b949e'; ctx.font = '12px system-ui';
+    ctx.textAlign = 'center';
+    ctx.fillText('No data yet — start polling', canvas.width/2, canvas.height/2);
+    return;
+  }
+  const W = canvas.width, H = canvas.height, pad = 8;
+  const barW = Math.max(4, Math.floor((W - pad*2) / Math.max(data.length, 1)) - 2);
+  data.forEach((item, i) => {
+    const x    = pad + i * ((W - pad*2) / Math.max(data.length, 1));
+    const barH = item.priority === 'CRITICAL' ? H-16 : item.priority === 'HIGH' ? H-36 :
+                 item.priority === 'MEDIUM'   ? H-56 : H-76;
+    ctx.fillStyle = PCOLOR[item.priority] || '#8b949e';
+    ctx.globalAlpha = 0.85;
+    ctx.beginPath(); ctx.roundRect(x, H-barH, barW, barH, 2); ctx.fill();
+  });
+  ctx.globalAlpha = 1;
+  ctx.strokeStyle = '#30363d'; ctx.lineWidth = 0.5;
+  [0.25, 0.5, 0.75].forEach(f => {
+    ctx.beginPath(); ctx.moveTo(pad, H*f); ctx.lineTo(W-pad, H*f); ctx.stroke();
+  });
+}
+window.addEventListener('resize', drawTimeline);
+
+/* ══════════════════════════════ ADD ROW ════════════════════════════════ */
+function addRow(data, lat) {
+  document.getElementById('empty-msg').style.display = 'none';
+  document.getElementById('rt-table').style.display  = '';
+  const d   = data.decision;
+  const c   = Math.round(d.confidence_pct);
+  const ts  = new Date(data.timestamp).toLocaleTimeString();
+  const cat = (data.alert_category || 'generic').replace(/_/g,' ');
+
+  /* ── key change: use the alert's server-assigned ID for the PDF link ── */
+  const alertId = data.id || null;
+
+  const tr = document.createElement('tr');
+  tr.className = 'flash';
+  tr.innerHTML = `
+    <td style="font-size:11px;color:#8b949e">${ts}</td>
+    <td><span class="badge ${PC[d.priority]}">${d.priority}</span></td>
+    <td style="font-size:11px;color:#8b949e">${cat}</td>
+    <td style="font-size:11px">${d.action.replace(/_/g,' ')}</td>
+    <td style="font-size:11px;color:#8b949e">${data.agent_name||'—'}</td>
+    <td style="font-size:11px;color:#8b949e;max-width:200px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap"
+        title="${data.rule_description||''}">${data.rule_description||'—'}</td>
+    <td style="font-size:11px">${c}%<span class="cb"><span class="cf" style="width:${c}%"></span></span></td>
+    <td class="${d.automated?'auto-y':'auto-n'}">${d.automated?'✓ Auto':'— Manual'}</td>
+    <td style="font-size:10px;color:#8b949e;max-width:140px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap"
+        title="${data.hipaa?.safeguard||''}">${(data.hipaa?.safeguard||'—').split('—')[0]}</td>
+    <td>
+      <button class="btn-pdf" ${alertId?'':'disabled'}
+              onclick="downloadServerPDF('${alertId}','${cat}')">
+        &#8659; PDF
+      </button>
+    </td>`;
+
+  const body = document.getElementById('rt-body');
+  body.insertBefore(tr, body.firstChild);
+  if (body.children.length > 50) body.removeChild(body.lastChild);
+}
+
+/* ══════════════════════════════ PDF — SERVER-SIDE ══════════════════════
+   Calls GET /alerts/{id}/pdf on the FastAPI backend.
+   The server uses ReportLab to generate a styled A4 PDF and streams it
+   back as application/pdf — the browser triggers a file download.
+   No client-side PDF generation, no window.print().
+═══════════════════════════════════════════════════════════════════════ */
+async function downloadServerPDF(alertId, category) {
+  if (!alertId || alertId === 'null') {
+    showToast('No alert ID — cannot fetch PDF', true); return;
+  }
+  const base = document.getElementById('api-url').value.trim();
+  const url  = `${base}/alerts/${alertId}/pdf`;
+
+  showToast('Generating PDF…');
+
+  try {
+    const res = await fetch(url);
+    if (!res.ok) {
+      const err = await res.json().catch(() => ({}));
+      showToast('PDF error: ' + (err.detail || res.status), true);
+      return;
+    }
+
+    /* Stream the binary response into a Blob and trigger download */
+    const blob     = await res.blob();
+    const blobUrl  = URL.createObjectURL(blob);
+    const filename = `helys-incident-${category.replace(/\s+/g,'-')}-${alertId.slice(0,8)}.pdf`;
+
+    const a = document.createElement('a');
+    a.href     = blobUrl;
+    a.download = filename;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(blobUrl);
+
+    showToast('PDF downloaded: ' + filename);
+  } catch(e) {
+    showToast('PDF fetch failed — is the API reachable?', true);
+  }
+}
+
+/* ══════════════════════════════ TOAST ══════════════════════════════════ */
+function showToast(msg, isErr) {
+  const t = document.getElementById('pdf-toast');
+  t.textContent = msg;
+  t.style.borderColor = isErr ? '#f85149' : '#3949ab';
+  t.style.color       = isErr ? '#f85149' : '#90caf9';
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 3500);
 }
 </script>
 </body>
